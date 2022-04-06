@@ -3,7 +3,7 @@
 
 
 #chatbox{
-	visibility: hidden;
+	visibility: visible;
 	display:block;
 	position: fixed;
 	width:100%;
