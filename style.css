@@ -1,0 +1,238 @@
+/* Button used to open the chat form - fixed at the bottom of the page */
+
+
+
+#chatbox{
+	visibility: hidden;
+	display:block;
+	position: fixed;
+	width:25%;
+	height:50%;
+	bottom: 0;
+    right: 0;
+	border:1px solid black;
+	padding-bottom:25px;
+	z-index: 9;
+	
+}
+
+
+
+#openChatButton {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-image: url("https://www.canada.ca/content/dam/sc-pp/default-avatar.png") ;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  
+  z-index:999999; /*to deltee!*/
+}
+.closeChatButton{
+	background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+	color: white;
+}
+
+.headerBanner{
+	margin:0;
+	padding:0;
+	overflow:clip;
+	height:25px;
+}
+
+.headerbox{
+	background-color: #006699;
+	color: white;
+	padding-left: 5px;
+}
+
+.icon {
+	width:10%;
+	height:10%;
+	border-radius: 50%;
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	
+}
+
+.inlineblock{
+	display:inline-block;
+}
+
+.bubble{
+	padding: 5px;
+	border-radius: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.assistant{
+	background-color: #e6e6e6;
+	
+}
+.user{
+	background-color: dodgerBlue;
+	color: white;
+	
+}
+
+.left{
+	width:100%;
+	text-align:left;
+}
+.right{
+	width:100%;
+	text-align:right;
+}
+table{
+	width:100%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.keywords{
+	display:none;
+	visibility:hidden;
+}
+
+
+.animate1{
+	display:inline;
+	animation-iteration-count: infinity;
+	animation-name: typing;
+	animation-duration: 1.5s;
+	animation-delay: 0s;
+	font-size: 25px;
+	padding:0px;
+	margin:0px;
+	
+}
+.animate2{
+	display:inline;
+	animation-iteration-count: infinity;
+	animation-name: typing;
+	animation-duration: 1.5s;
+	animation-delay: 0.5s;
+	font-size: 25px;
+	padding:0px;
+	margin:0px;
+}
+.animate3{
+	
+	display:inline;
+	animation-iteration-count: infinity;
+	animation-name: typing;
+	animation-duration: 1.5s;
+	animation-delay: 1s;
+	font-size: 25px;
+	padding:0px;
+	margin:0px;
+}
+
+.center{
+	text-align: center;
+}
+
+
+
+@keyframes typing {
+	
+	from {font-size: 18px;}
+	to {font-size: 25px;}
+	
+}
+
+#typing{
+	width:50px;
+	
+}
+#typingBubble{
+	
+	float:center;
+	display:none;
+	visibility:hidden;
+	position:static;
+	bottom:5px;
+	
+}
+
+
+
+
+.question{
+	text-align: left;
+	display:block;
+}
+
+#send{
+	position: relative;
+	
+}
+#textbox{
+	position: relative;
+	height:auto;
+	min-width: 70%;
+	max-width: auto;
+}
+
+.hidden{
+	visibility: hidden;
+	display: none;
+}
+
+
+
+.messageForm{
+	padding-left:10px;
+	padding-right:10px;
+}
+.scrollbox{/*includes answers, questions excludes: topHeader and messagebar.*/
+	overflow:scroll;
+	overflow-x: hidden; /* Hide horizontal scrollbar */
+	height: calc(100% - 40px);
+}
+
+.messageBar{
+	background-color: white;
+	position: absolute;
+	
+	height:30px;
+
+	bottom:0px;
+	
+	width: 100%;
+	padding-top:5px;
+	padding-bottom:5px;
+	
+	margin-right:10px;
+	
+overflow: hidden visible;
+	
+}
+.questionsBox{/*includes questions only*/
+	
+
+	padding-left:10px;
+	padding-right:10px;	
+	height:100%;
+
+}
+
+
+.bodyBox{/*includes answers, questions, and messagebar, excludes the top header.*/
+	height:100%;
+}
