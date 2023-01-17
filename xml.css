@@ -18,14 +18,19 @@
 
 .assistantContainer{
 	/*Top div that contains the button and the message "Need Technical Assistance?*/
+	/*setting width and height for the assistant frame as well.*/
 	visibility: hidden;
 	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 .assistantFrame{
 	/*The frame needs to be 100^ in width and set in height.*/
 	width: 100%;
+	height: 100%;
 	border-width: 0px;
 }
+
 
 .topBannerContainer{
 
