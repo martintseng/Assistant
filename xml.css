@@ -1,0 +1,88 @@
+.bannerContainer{
+	/*Div that contains everything. the master div.*/
+	width: 100%px;
+	position: relative;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 80%;
+}
+
+
+
+.buttonContainer{
+	height:50px;
+	background-color: rgb(19, 96, 125);
+	
+}
+
+.assistantContainer{
+	/*Top div that contains the button and the message "Need Technical Assistance?*/
+	visibility: hidden;
+	position: absolute;
+}
+.assistantFrame{
+	/*The frame needs to be 100^ in width and set in height.*/
+	width: 100%;
+	border-width: 0px;
+}
+
+.topBannerContainer{
+
+	height: 250px;
+	background-color: rgb(19, 96, 125);
+}
+.bottomBannerContainer{
+	
+
+	background-color:red;
+	
+}
+
+
+.topBannerContainerContent{
+	padding-left: 40px;
+	padding-top: 5px;
+	padding-right: 40px;
+	padding-bottom: 15px;
+	
+}
+
+.quickLinksList{
+	list-style: none;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.topBannerContainerContentLinks{
+	background-color: rgb(202, 29, 108);
+
+}
+ul li { padding: 5px 0px; }
+
+.assistantButton{
+	cursor:pointer;
+	background:transparent;
+	border-width: 0px;
+}
+.buttonImage{
+	height:50px;
+	width: 50px;
+	
+}
+
+.pointerImage{
+	height:58px;
+}
+
+.floatRight{
+	float:right;
+}
+
+.link{
+	color:white;
+}
+.bannerImage{
+	height:300px;
+	object-fit: cover;
+}
