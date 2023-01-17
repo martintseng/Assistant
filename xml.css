@@ -34,12 +34,12 @@
 
 .topBannerContainer{
 
-	height: 250px;
+	height: 200px;
 	background-color: rgb(19, 96, 125);
 }
 .bottomBannerContainer{
 
-	height:350px;
+	height:300px;
 }
 
 
@@ -47,7 +47,7 @@
 	padding-left: 40px;
 	padding-top: 5px;
 	padding-right: 40px;
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 	
 }
 
