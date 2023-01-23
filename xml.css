@@ -27,7 +27,7 @@
 .assistantFrame{
 	/*The frame needs to be 100^ in width and set in height.*/
 	width: 100%;
-	height: 100%;
+	height: 550px;
 	border-width: 0px;
 }
 
