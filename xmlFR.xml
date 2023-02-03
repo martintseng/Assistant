@@ -27,7 +27,7 @@
 <div class="buttonContainer">
 
 	<button id="openChatButton" class="assistantButton floatRight" onclick="toggleChatBox()">
-		<img class="buttonImage" src="https://eia-lit.github.io/Assistant/avatar.png" alt="Toggle Chat Box">
+		<img class="buttonImage" src="https://eia-lit.github.io/Assistant/avatarwhite.png" alt="Toggle Chat Box">
 	</button>
 	<p class="floatRight">Need some assistance? Try out our virtual assistance!</p>
 </div>
