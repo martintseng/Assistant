@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs title="MyPortlet" width="100%">
+</ModulePrefs>
+
+<Content type="html" view="home">
+
+
+
+
+<![CDATA[
+	
+<html>
+<header>
+<!-- <link rel="stylesheet" href="https://eia-lit.github.io/Assistant/xml.css"> -->
+<!--  <script src="https://eia-lit.github.io/Assistant/xml_script.js"></script>  -->
+	
+<link rel="stylesheet" href="https://eia-lit.github.io/Assistant/xml.css">
+<script src="https://eia-lit.github.io/Assistant/xml_script.js"></script>
+</header>
+<body>
+	<iframe src="https://eia-lit.github.io/Assistant/canvas_en.html"></iframe>
+</body>
+</html>
+]]>
+
+</Content>
+</Module>
