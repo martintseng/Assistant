@@ -1,6 +1,6 @@
 .bannerContainer{
 	/*Div that contains everything. the master div.*/
-	width: 100%px;
+	width: 100%;
 	position: relative;
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
@@ -27,19 +27,18 @@
 .assistantFrame{
 	/*The frame needs to be 100^ in width and set in height.*/
 	width: 100%;
-	height: 550px;
+	height: 560px;
 	border-width: 0px;
 }
-
 
 .topBannerContainer{
 
 	height: 250px;
 	background-color: rgb(19, 96, 125);
 }
-
 .bottomBannerContainer{
 	background-color:rgb(19, 96, 125);
+	padding-bottom: 10px;
 }
 
 
@@ -69,6 +68,7 @@ ul li { padding: 5px 0px; }
 	border-width: 0px;
 }
 .buttonImage{
+	filter: brightness(0) invert(1);
 	padding-top: 5px;
 	height:35px;
 	width: 35px;
