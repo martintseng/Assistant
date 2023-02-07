@@ -30,6 +30,11 @@
 	height: 560px;
 	border-width: 0px;
 }
+.canvas{
+	/*The frame needs to be 100^ in width and set in height. Canvas is also a frame.*/
+	width: 100%;
+	height: 560px;
+	border-width: 0px;}
 
 .topBannerContainer{
 
