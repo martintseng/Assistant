@@ -5,16 +5,26 @@
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
-	line-height: 80%;
+	font-size: 14px;
+	/*Paragraph interligns Spacing*/
+	
+	line-height: 60%;
 }
 
 
 
 .buttonContainer{
-	height:50px;
+	height:30px;
 	background-color: rgb(19, 96, 125);
-	
 }
+.buttonImage{
+	filter: brightness(0) invert(1);
+	padding-top: 5px;
+	
+	height:25px;
+	width: 25px;
+}
+
 
 .assistantContainer{
 	/*Top div that contains the button and the message "Need Technical Assistance?*/
@@ -27,18 +37,21 @@
 .assistantFrame{
 	/*The frame needs to be 100^ in width and set in height.*/
 	width: 100%;
-	height: 560px;
+	padding-top:5px;
+	height: 455px;
 	border-width: 0px;
 }
 .canvas{
-	/*The frame needs to be 100^ in width and set in height. Canvas is also a frame.*/
+	/*The frame needs to be 100^ in width and set in height.*/
 	width: 100%;
-	height: 560px;
-	border-width: 0px;}
+	padding-top:5px;
+	height: 455px;
+	border-width: 0px;
+}
 
 .topBannerContainer{
 
-	height: 250px;
+	height: 200px;
 	background-color: rgb(19, 96, 125);
 }
 .bottomBannerContainer{
@@ -72,12 +85,7 @@ ul li { padding: 5px 0px; }
 	background:transparent;
 	border-width: 0px;
 }
-.buttonImage{
-	filter: brightness(0) invert(1);
-	padding-top: 5px;
-	height:35px;
-	width: 35px;
-}
+
 
 .pointerImage{
 	height:58px;
@@ -94,6 +102,6 @@ ul li { padding: 5px 0px; }
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	height:300px;
+	height:250px;
 	object-fit: cover;
 }
