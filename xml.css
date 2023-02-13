@@ -5,16 +5,16 @@
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 12px;
 	/*Paragraph interligns Spacing*/
 	
-	line-height: 60%;
+	line-height: 55%;
 }
 
 
 
 .buttonContainer{
-	height:30px;
+	height:25px;
 	/*Green*/
 	background-color: rgb(19, 96, 125);
 }
@@ -22,8 +22,8 @@
 	filter: brightness(0) invert(1);
 	padding-top: 5px;
 	
-	height:25px;
-	width: 25px;
+	height:20px;
+	width: 20px;
 }
 
 
@@ -39,14 +39,14 @@
 	/*The frame needs to be 100^ in width and set in height.*/
 	width: 100%;
 	padding-top:5px;
-	height: 455px;
+	height: 430px;
 	border-width: 0px;
 }
 .canvas{
 	/*The frame needs to be 100^ in width and set in height.*/
 	width: 100%;
 	padding-top:5px;
-	height: 455px;
+	height: 430px;
 	border-width: 0px;
 }
 
@@ -103,7 +103,7 @@ ul li { padding: 5px 0px; }
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	height:250px;
+	height:225px;
 	object-fit: cover;
 }
 .assistantLinkButton{
@@ -111,7 +111,7 @@ ul li { padding: 5px 0px; }
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 12px;
 	cursor:pointer;
 	border: none;
 	padding: 0px;
