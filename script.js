@@ -308,11 +308,11 @@ function assistantTypes(elmt){
 				message.classList.add("inlineblock");
 			
 			
-				if (isEnglish){
-					message.innerText = "Is there anything else that I can help you with?";
-				}else {
-					message.innerText = "Y a-t-il autre chose que je peux vous aider ?";
-				}
+				//if (isEnglish){
+				//	message.innerText = "Is there anything else that I can help you with?";
+				//}else {
+				//	message.innerText = "Y a-t-il autre chose que je peux vous aider ?";
+				//}
 			
 				
 				
