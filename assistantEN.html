@@ -2,138 +2,116 @@
 <html>
 <head>
 	
-	<title>SABA Virtual Assistant</title>
+	<title>SABA Assistant Virtuel</title>
+	
 	<!-- <link rel="stylesheet" href="https://eia-lit.github.io/Assistant/style.css"> -->
 	<!--  <script src="https://eia-lit.github.io/Assistant/script.js"></script>  -->
-	
 	
 	<!-- <link rel="stylesheet" href="style.css"> -->
 	<!--  <script src="script.js"></script>  -->
 	
 <link rel="stylesheet" href="https://eia-lit.github.io/Assistant/style.css">
 <script src="https://eia-lit.github.io/Assistant/script.js"></script>
-
+	
+	
 </head>
 <body>
 
 <!-- Start of Virtual Assistant. -->
-	<div id="outerVirtualAssistantDiv">
-	<div id="virtualAssistantDiv">
-		<div id="outerLeftDiv">
-		<div id="leftDiv">
-			<div class="headerDiv">
-				<div class="header">
-				<h3 class="headerBanner left">Virtual Assistant</h3>
-				</div>
-				<!-- Language Switch here. -->
-				<div id="language"><a class="light" href="https://eia-lit.github.io/Assistant/assistantFR">Français</a></div>
-				
-				
-			</div>
-			
-			<div id="conversationDiv">
-				<table id="QNA">
-					<!-- COVERSATION WILL BE HERE -->
-				</table>
-			
-		
-			<div id="typingBubble">
-				<table>
-					<tr><td class="left">
-					<!-- typing animation -->
-				<div id="typing" class="bubble assistant inlineblock center">
-					<table class="center">
-						<tr>
-							<td class="animate1">.</td>
-							<td class="animate2">.</td>
-							<td class="animate3">.</td>
-						</tr>
-					</table>
-				</div>
-				</td></tr>
-				</table>
-			</div> <!-- ebd if typing bubble -->
-			</div> <!-- end of conversationDiv -->
-		<div class="messageBar">
-			<div class="messageForm">
-				<input id="textbox" placeholder="Type message.." name="msg" autocomplete="off" type="text">
-				<button id="send" onclick="sendMessage()">Send</button>
-			</div>
-		</div>
-		
-		
-		</div> <!-- end of leftDiv. -->
-		</div> <!-- end of outerLeftDiv. -->
-		
-		<div id="outerRightDiv">
-			<div id="rightDiv">
-				<div class="headerDiv">
-					<div class="header">
-						<h3 class="headerBanner left">Suggested Options</h3>
+ <div id="outerVirtualAssistantDiv">
+ <div id="virtualAssistantDiv">
+  <div id="outerLeftDiv">
+  <div id="leftDiv">
+   <div class="headerDiv">
+    <div class="header">
+    <h3 class="headerBanner left">Assistant Virtuel</h3>
+    </div>
+    <!-- Language Switch here. -->
+    <div id="language"><a class="light" href="https://eia-lit.github.io/Assistant/assistantEN">English</a></div>
+    
+    
+   </div>
+   
+   <div id="conversationDiv">
+    <table id="QNA">
+     <!-- COVERSATION WILL BE HERE -->
+    </table>
+   
+  
+   <div id="typingBubble">
+    <table>
+     <tr><td class="left">
+     <!-- typing animation -->
+    <div id="typing" class="bubble assistant inlineblock center">
+     <table class="center">
+      <tr>
+       <td class="animate1">.</td>
+       <td class="animate2">.</td>
+       <td class="animate3">.</td>
+      </tr>
+     </table>
+    </div>
+    </td></tr>
+    </table>
+   </div> <!-- ebd if typing bubble -->
+   </div> <!-- end of conversationDiv -->
+  <div class="messageBar">
+   <div class="messageForm">
+    <input id="textbox" placeholder="Typez votre message..." name="msg" autocomplete="off" type="text">
+    <button id="send" onclick="sendMessage()">Send</button>
+   </div>
+  </div>
+  
+  
+  </div> <!-- end of leftDiv. -->
+  </div> <!-- end of outerLeftDiv. -->
+  
+  <div id="outerRightDiv">
+  <div id="rightDiv">
+   <div class="headerDiv">
+    <div class="header">
+    <h3 class="headerBanner left">Options suggérées</h3>
+   </div>
+   <button id="closeChatButton" class="closeButton" onclick="closeChatBox()">Fermer la fenêtre</button>
+  </div>
 
-					</div>
-						<button id="closeChatButton" class="closeButton" onclick="closeChatBox()">Close Window</button>
-				</div>
+
+
 <div class="rightOptions">
-<div id="questions">
-<button class="bubble question default" onclick="sendQuestion(1)">How do I get a <strong>Saba account</strong>?</button><p class="keywords">account</p>
-<button class="bubble question default" onclick="sendQuestion(2)">How do I reset my <strong>password</strong> if forgotten?</button><p class="keywords">reset, forgot, password, pass</p>
-<button class="bubble question hidden" onclick="sendQuestion(3)">I have returned from an absence; how do I get my <strong>Saba account</strong> reactivated?</button><p class="keywords">return, returned, absence, leave, account, reactivation, reactived</p>
-<button class="bubble question hidden" onclick="sendQuestion(4)">What is <strong>Accessibility Mode</strong> and how do I activate it?</button><p class="keywords">accessibility</p>
-<button class="bubble question hidden" onclick="sendQuestion(5)">What should I do when my course is not loading properly?</button><p class="keywords">not loading, course</p>
-<button class="bubble question hidden" onclick="sendQuestion(6)">I want to <strong>bookmark</strong> the link to Saba. Which link should I use?</button><p class="keywords">bookmark, save link</p>
-<button class="bubble question default" onclick="sendQuestion(7)">How do I switch my Saba session's viewing language to <strong>English</strong> or <strong>French</strong>?</button><p class="keywords">language</p>
-<button class="bubble question default" onclick="sendQuestion(8)">How do I switch the language of my class?</button><p class="keywords">language, switch, class</p>
-<button class="bubble question hidden" onclick="sendQuestion(9)">I need to update my <strong>manager</strong> in Saba</button><p class="keywords">manager</p>
-<button class="bubble question default" onclick="sendQuestion(10)">What should I do if my manager does not see my <strong>approval request</strong>?</button><p class="keywords">approval</p>
-<button class="bubble question hidden" onclick="sendQuestion(11)">What happens to the Saba account when an employee leaves the Department, retires or returns to the Department?</button><p class="keywords">leave, return, retire</p>
-<button class="bubble question hidden" onclick="sendQuestion(12)">For how long can I be inactive in Saba before I am automatically logged out?</button><p class="keywords">inactive, logout</p>
-<button class="bubble question hidden" onclick="sendQuestion(13)">Do I need to update my Saba <strong>password</strong> regularly?</button><p class="keywords">password, update</p>
-<button class="bubble question hidden" onclick="sendQuestion(14)">Is it possible to leave course content open in a separate window when taking a final test?</button><p class="keywords">window, separate, course, content, test</p>
-<button class="bubble question hidden" onclick="sendQuestion(15)">If I do not log into Saba often and my manager assigns me a course, will I be notified by email (Outlook)?</button><p class="keywords">notification, email</p>
-<button class="bubble question hidden" onclick="sendQuestion(16)">I don't see all of my courses in my learning history</button><p class="keywords">learning, history</p>
-<button class="bubble question default" onclick="sendQuestion(17)">I've exhausted all final test/evaluation attempts. What should I do?</button><p class="keywords">attempts</p>
-<button class="bubble question hidden" onclick="sendQuestion(18)">An employee from my team has exhausted all attempts at passing a final test. How do I add an attempt?</button><p class="keywords">attempts</p>
-<button class="bubble question hidden" onclick="sendQuestion(19)">How do I add training I have completed outside of Saba?</button><p class="keywords">external, outside, training</p>
-<button class="bubble question hidden" onclick="sendQuestion(20)">I'm having other technical difficulties with Saba</button><p class="keywords">other, technical, helpdesk, ticket</p>
-<button class="bubble question hidden" onclick="sendQuestion(21)">How do I gain access to the Saba manager role if I have to manage my team's learning?</button><p class="keywords">role, team</p>
-<button class="bubble question hidden" onclick="sendQuestion(22)">As a manager, how do I add or remove employees from My Team?</button><p class="keywords">remove, team, employee</p>
-</div>
 
-<!-- Built in Questions, do not touch! -->
+<div id="questions"><button class="bubble question default" onclick="sendQuestion(1)">Comment puis-je obtenir un compte Saba?</button><p class="keywords">compte</p><button class="bubble question default" onclick="sendQuestion(2)">Comment puis-je réinitialiser mon mot de passe si je l'ai oublié?</button><p class="keywords">réinitialiser, oublier, oublié, mot de passe, mdp</p><button class="bubble question hidden" onclick="sendQuestion(3)">Je suis de retour d’une absence; comment puis-je réactiver mon compte Saba?</button><p class="keywords">retour, absence, vacance, compte, réactiver, reactiver</p><button class="bubble question hidden" onclick="sendQuestion(4)">Qu’est-ce que le mode d’accessibilité et comment l’activer ?</button><p class="keywords">accessibilité</p><button class="bubble question hidden" onclick="sendQuestion(5)">Que dois-je faire si mon cours ne se charge pas correctement?</button><p class="keywords">charge, chargement, cours</p><button class="bubble question hidden" onclick="sendQuestion(6)">Je veux ajouter le lien vers Saba à mes signets. Lequel dois-je utiliser ?</button><p class="keywords">signet, lien</p><button class="bubble question default" onclick="sendQuestion(7)">Comment puis-je changer la langue de visualisation de ma session Saba à l'anglais ou au français ?</button><p class="keywords">langue, visualisation</p><button class="bubble question default" onclick="sendQuestion(8)">Comment puis-je changer la langue de ma classe ?</button><p class="keywords">langue, changer</p><button class="bubble question hidden" onclick="sendQuestion(9)">Je dois mettre à jour mon gestionnaire dans Saba</button><p class="keywords">gestionnaire</p><button class="bubble question default" onclick="sendQuestion(10)">Que faire si mon gestionnaire ne voit pas mes demandes d'approbation ?</button><p class="keywords">approbation, approuver</p><button class="bubble question hidden" onclick="sendQuestion(11)">Qu’arrive-t-il au compte de Saba lorsqu’un employé quitte le Ministère, prend sa retraite ou revient au Ministère ?</button><p class="keywords">quitter, retour, retraite</p><button class="bubble question hidden" onclick="sendQuestion(12)">Combien de temps puis-je être inactif dans Saba avant d’être automatiquement déconnecté ?</button><p class="keywords">inactif, déconnecter, déconnecté</p><button class="bubble question hidden" onclick="sendQuestion(13)">Est-ce que je dois régulièrement mettre à jour mon mot de passe Saba ?</button><p class="keywords">mot de passe, mdp</p><button class="bubble question hidden" onclick="sendQuestion(14)">Est-il possible de laisser le contenu d’un cours affiché dans une fenêtre séparée lors d’un examen final ?</button><p class="keywords">examen, examen final, fenêtre</p><button class="bubble question hidden" onclick="sendQuestion(15)">Si je ne me connecte pas souvent dans Saba et mon gestionnaire m’assigne à un cours, serai-je avisé par courriel (Outlook) ?</button><p class="keywords">notification, courriel, aviser, avisé, assigner</p><button class="bubble question hidden" onclick="sendQuestion(16)">Je ne vois pas tous mes cours dans mon historique de formation.</button><p class="keywords">historique</p><button class="bubble question default" onclick="sendQuestion(17)">J'ai épuisé toutes les tentatives d'examen final et d'évaluation. Que devrais-je faire ?</button><p class="keywords">tentatives, essais</p><button class="bubble question hidden" onclick="sendQuestion(18)">Un employé de mon équipe a épuisé toutes les tentatives pour réussir un examen final. Comment faire pour ajouter une tentative ?</button><p class="keywords">tentatives, essais</p><button class="bubble question hidden" onclick="sendQuestion(19)">Comment puis-je ajouter de la formation complétée en dehors de Saba ?</button><p class="keywords">dehors, formation, complété, complétée</p><button class="bubble question hidden" onclick="sendQuestion(20)">Je rencontre d’autres difficultés techniques avec Saba.</button><p class="keywords">autre, technique, difficulté, ticket, billet</p><button class="bubble question hidden" onclick="sendQuestion(21)">Comment puis-je obtenir le rôle de gestionnaire dans Saba si je dois gérer l'apprentissage de mon équipe?</button><p class="keywords">role, gérer, équipe</p><button class="bubble question hidden" onclick="sendQuestion(22)">En tant que gestionnaire, comment puis-je ajouter ou retirer des employés de mon équipe ?</button><p class="keywords">retirer, ajouter, employés, équipe</p></div><!-- Built in Questions, do not touch! -->
 <div id="built-in-questions">
 <button class="bubble question hidden" onclick="listInitialQuestions()">List initial options.</button>
-<button class="bubble question" onclick="listAllQuestions()">List all options.</button>
+<button class="bubble question" onclick="listAllQuestions()">Lister toutes les options.</button>
 <br><!-- need this break to space the bottom scrollbar -->
-</div>
-
-<!-- Put your answers here, and make sure to include the same classes as the other answers (bubble and answer). -->
+</div><!-- Put your answers here, and make sure to include the same classes as the other answers (bubble and answer). -->
 <!-- Please make sure that you have the exact number of answers as the number of questions. ANSWERS MUST BE in the same ORDER corresponding to the question above. -->
 <!-- Example: Question #3: How do I reset my password. Answer#3: You can reset your passsword here. -->
-<div id="answers" class="hidden">
-<div class="bubble answer inlineblock">Follow the instructions to <a target="_blank" href="https://iservice.prv/eng/college/saba/first-time.shtml">Access your account for the first time</a>.</div>
-<div class="bubble answer inlineblock">Follow the instructions to <a target="_blank"href="https://iservice.prv/eng/college/saba/reset-password.shtml">Reset your Password</a>.</div>
-<div class="bubble answer inlineblock">If your account was terminated (ex. leave, change of department…), it might need to be reactivated by the Learning Infrastructure team before you can access it again.</br></br>If you are unable to log in with your password or do not receive a password reset email within one hour of resetting it, please create a ticket with <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a> to have your account reactivated.</div>
-<div class="bubble answer inlineblock">Accessibility Mode in Saba helps you use your keyboard through various menu options.</br></br>Note: if you need an alternate version of training content, you will still need to your regional <a target="_blank" href="https://iservice.prv/eng/college/contact_us/index.shtml">Learning Centre</a>.</br></br>To access Accessibility Mode, you must enter your credentials on Saba’s login page, then select <strong>More Options</strong> and select <strong>Accessibility Mode</strong> . You can then select Sign In.</div>
-<div class="bubble answer inlineblock">If you are having trouble viewing course content, restart your computer to make sure every program is up to date and clear your cache:<br><br><ul><li>Select the Internet Tool icon in the top right corner of your browser window.</li><li>From the drop-down list, select Internet Options.</li><li>Under Browsing History, select the Delete button.</li><li>Select Delete again.</li><li> Log out of Saba and close the Internet Explorer window.</li></ul><br>If you are still experiencing issues, please create a ticket with <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a> and include the following details:<br><br><ul><li>The name of the course you were trying to view;</li><li> The internet browser you were using;</li><li>A brief description of the problem; and </li><li>At which point of the course the issue happened.</li></ul></div>
-<div class="bubble answer inlineblock">The link to bookmark is <a target="_blank" href="https://esdc.sabacloud.com">https://esdc.sabacloud.com</a>. Since every login attempt creates a unique session link, it is not possible to log in to the system using any other link.</div>
-<div class="bubble answer inlineblock">There is no toggle between the English and French display once you log in to Saba. Click on the Français canadien link at the bottom of the Saba home page to access the system in French. Once you are logged in, you are welcome to register to any English or French course regardless of the display language you are using in Saba. If you are having trouble with your preferred language not displaying, please consult Saba language display issue (PDF, 92 KB).<a target="_blank" href="https://iservice.prv/eng/college/saba/docs/SabaLanguageDisplayIssue.pdf">Saba language display issue (PDF, 92 KB)</a></div>
-<div class="bubble answer inlineblock">Your course registration is associated to a specific class, which is offered in either French or English. If the class is not in your preferred language, you can drop the first registration and enroll to a class in the other language, or also enroll in the other language.</br></br>Please note that there may be limited availability in virtual, in-person and blended classes. You may not find a suitable class as a replacement, but you can contact the course owners to inquire about future offerings. You can find the course owner's contact information at the bottom of the course overview page.</div>
-<div class="bubble answer inlineblock">Please follow the guidance indicated in this <a target="_blank" href="http://dialogue/grp/learning-apprentissage/Shared%20Documents/16-CLG-CLS-TRG-Roadmap-JobAid-ChangingManager-04Dec2017-FINAL.docx">job aid (DOCX, 379 KB)</a> to make the necessary changes in Saba.</br></br>If your manager does not appear in your search, please open a ticket with <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>.</div>
-<div class="bubble answer inlineblock">This issue usually happens when you update your manager. When you register to a course that needs approval, the request is sent to the manager on your profile at that moment; it cannot be approved by another manager or transferred to them.</br></br>If the course is not at its registration limit, you can drop the course and re-register, which will trigger a new approval request. If this is not possible, please open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>.</div>
-<div class="bubble answer inlineblock">Saba profiles cannot be deleted. They become terminated and not accessible. They will not show up in reporting nor be available for access unless someone with appropriate access is searching for terminated profiles. Terminated profiles can be re-activated.</div>
-<div class="bubble answer inlineblock">To safeguard your data, your session will time out after 20 minutes of inactivity as directed by Treasury Board Secretariat's policies.</div>
-<div class="bubble answer inlineblock">You are no longer required to regularly update your password. This reflects the <a target="_blank" href="https://www.canada.ca/en/government/system/digital-government/online-security-privacy/password-guidance.html#toc3-2">password guidance</a> for GC system owners.</div>
-<div class="bubble answer inlineblock">This is not possible at this time in Saba.</div>
-<div class="bubble answer inlineblock">Yes, you will receive a notification triggered by Saba.</div>
-<div class="bubble answer inlineblock">Any learning that you complete inside the Saba catalogue will be captured in your learning history. The only data that was migrated from our legacy systems to Saba was the essential learning history related to an ongoing training requirement or recertification. To record a complete history of your learning, you may need to add activities to your learning history inside Saba. See the job aid <a target="_blank" href="https://iservice.prv/eng/college/saba/add-completed-course.shtml">Add a Completed Course</a> for instructions on adding completed learning to your profile.</div>
-<div class="bubble answer inlineblock">Contact your team leader/supervisor or manager to request an additional test attempt.</div>
-<div class="bubble answer inlineblock">Open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a> to request an extra attempt for your employee. Provide your team member's name as well as the name of the affected course. Following your request, the National Saba Team will add one additional attempt.</div>
-<div class="bubble answer inlineblock">To add training completed outside of Saba to your Saba learning history, please refer to the <a target="_blank" href="https://iservice.prv/eng/college/saba/add-completed-course.shtml">Add a Completed Course</a> job aid.</div>
-<div class="bubble answer inlineblock">For all other technical issues, please create a ticket with <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>.</div>
-<div class="bubble answer inlineblock">Open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a> to request the manager role. For more information, refer to the <a target="_blank" href="https://iservice.prv/eng/college/saba/managers.shtml">Managers</a> page.</div>
-<div class="bubble answer inlineblock">Managers cannot modify their team. Learners are responsible for keeping their manager up to date, and the Learning Infrastructure team can help when this is not possible.</br></br>To add a member to your team, you will need to ask the employee to change their manager in their profile. Reference the job aid – <a target="_blank" href="http://dialogue/grp/learning-apprentissage/Shared%20Documents/16-CLG-CLS-TRG-Roadmap-JobAid-ChangingManager-04Dec2017-FINAL.docx">Change your Manager in Saba (DOCX, 368 KB)</a>.<br><br>To remove a team member, create a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>.</div>
-</div>
+<div id="answers" class="hidden"><div class="bubble answer inlineblock">Veuillez suivre les directives présentées à « <a target="_blank" href="https://iservice.prv/fra/college/saba/premiere-fois.shtml">Accéder à votre compte Saba pour la première fois</a>. »</div><div class="bubble answer inlineblock">Veuillez suivre les directives présentées à <a target="_blank" href="https://iservice.prv/fra/college/saba/reinitialiser-mot-passe.shtml">« Réinitialiser son mot de passe »</a>.</div><div class="bubble answer inlineblock">Si votre compte a été désactivé (p. ex. congé, changement de ministère…), il pourrait être nécessaire que l’équipe Infrastructure d’apprentissage l’active de nouveau avant que vous puissiez y accéder.<br><br>
+Si vous n’arrivez pas à vous connecter à l’aide de votre mot de passe ou que vous ne recevez pas le courriel de réinitialisation de mot de passe dans l’heure suivant votre réinitialisation, veuillez soumettre une demande à <a target="_blank" href=" https://iservice.prv/fra/giti/isn/index.shtml">InfoService national</a>.</div><div class="bubble answer inlineblock">Le mode d’accessibilité de Saba vous aide à utiliser votre clavier en offrant diverses options de menu.
+<strong>Notez</strong> : si vous avez besoin d’une autre version du contenu d'une formation, vous devrez toujours contacter votre <a target="_blank" href=" https://iservice.prv/fra/college/contactez_nous/index.shtml">Centre d’apprentissage</a> régional.<br><br>
+Pour accéder au mode d’accessibilité, vous devrez saisir vos identifiants sur la <a target="_blank" href=" https://esdc.sabacloud.com/">page de connexion de Saba</a>, sélectionner <strong>Autres Options</strong>, puis sélectionner <strong>Mode d’accessibilité</strong>. Vous pourrez ensuite sélectionner <strong>Connexion</strong>.</div><div class="bubble answer inlineblock">Si vous avez de la difficulté à visionner le contenu d'un cours, redémarrez votre ordinateur afin de vous assurer que tous vos programmes sont à jour, puis videz votre mémoire cache :<br><br>
+<ul>
+<li>Sélectionnez l'icône Outils dans le coin supérieur droit d'Internet Explorer.</li>
+<li>Dans la liste déroulante, sélectionnez <strong>Options Internet</strong>.</li>
+<li>Sous Historique de navigation, sélectionnez <strong>Supprimer</strong>.</li>
+<li>Sélectionnez <strong>Supprimer</strong> de nouveau.</li>
+<li>Déconnectez-vous de Saba et fermez la fenêtre Internet Explorer.</li>
+</ul>
+<br>
+Si vous rencontrez toujours des difficultés, veuillez soumettre une demande à <a target="_blank" href=" https://iservice.prv/fra/giti/isn/index.shtml ">InfoService national</a> et y inclure les renseignements suivants :<br><br>
+
+<ul>
+<li> Le nom du cours que vous tentiez de visionner;</li>
+<li> Le navigateur internet que vous utilisiez;</li>
+<li> Une brève description du problème;</li>
+<li> À quel moment du cours ce problème est arrivé.</li>
+</ul></div><div class="bubble answer inlineblock">Le lien à ajouter est <a target="_blank" href=" https://esdc.sabacloud.com/">https://esdc.sabacloud.com</a>. Puisque chaque tentative de connexion crée un lien de session unique, il n’est pas possible de se connecter au système en utilisant tout autre lien.</div><div class="bubble answer inlineblock">Vous ne pouvez pas aller de l'anglais au français ou vice versa une fois que vous êtes dans Saba. Cliquez sur le lien Français canadien dans la partie inférieure de la page d'accueil de Saba pour accéder au système en français. Lorsque vous êtes connecté, vous êtes libre de vous inscrire en anglais ou en français, peu importe la langue d'affichage que vous utilisez dans Saba. Si vous avez de la difficulté à visualiser votre langue de préférence, veuillez suivre cette procédure pour corriger les <a target="_blank" href=" https://iservice.prv/fra/college/saba/docs/SabaLangueAfficheeEcran.pdf">problèmes liés à la langue d'affichage dans Saba (PDF, 201 Ko)</a>.</div><div class="bubble answer inlineblock">Votre inscription à un cours est associée à une classe spécifique, qui est offerte soit en français ou en anglais. Si la classe n'est pas dans votre langue préférée, vous pouvez abandonner votre première inscription et vous inscrire à la classe dans l'autre langue, ou bien vous inscrire dans les deux langues. <br><br>
+Veuillez noter que la disponibilité des classes virtuelles, tutorées et mixtes pourrait être limitée. Il est possible que vous ne trouviez pas de classe qui vous convienne en remplacement, mais vous pouvez contacter le propriétaire du cours pour vous renseigner sur les offres futures. Vous trouverez les coordonnées du propriétaire du cours au bas de la page d'aperçu du cours.</div><div class="bubble answer inlineblock">Veuillez suivre les directives présentées dans cet <a target="_blank" href=" http://dialogue/grp/learning-apprentissage/Shared%20Documents/16-CLG-CLS-TRG-Roadmap-JobAid-ChangerGestionnaire04Dec2017-FR-FINAL.docx">aide-mémoire (DOCX, 416 Ko)</a> pour apporter les changements nécessaires dans Saba. <br><br>
+Si votre gestionnaire n'apparaît pas dans votre recherche, veuillez soumettre une demande à l'<a target="_blank" href=" https://iservice.prv/fra/giti/isn/index.shtml">InfoService national</a>.</div><div class="bubble answer inlineblock">Ce problème survient généralement lorsque vous mettez à jour votre gestionnaire. Lorsque vous vous inscrivez à un cours qui doit être approuvé, la demande est envoyée au gestionnaire qui figure sur votre profile à ce moment-là; elle ne peut pas être approuvée par un autre responsable ou lui être transférée. <br><br>
+Si le cours n'est pas comblé, vous pouvez vous l'abandonner et vous y réinscrire, ce qui générera une nouvelle demande d'approbation. Si ce n'est pas possible, veuillez soumettre une demande à l'<a target="_blank" href=" https://iservice.prv/fra/giti/isn/index.shtml">InfoService national</a>.</div><div class="bubble answer inlineblock">Les profils dans Saba ne peuvent pas être supprimés. Ils sont désactivés et ne sont pas accessibles. Ils n’apparaîtront pas lors de la production de rapports et ne seront pas accessibles à moins que quelqu’un ayant un accès approprié cherche des profils désactivés. Les profils désactivés peuvent être réactivés.</div><div class="bubble answer inlineblock">Afin de sauvegarder vos données, votre session se terminera après 20 minutes d’inactivité, conformément à la politique du du Secrétariat du Conseil du Trésor.</div><div class="bubble answer inlineblock">Il n'est plus requis de régulièrement mettre à jour votre mot de passe. Ceci reflète <a target="_blank" href=" https://www.canada.ca/fr/gouvernement/systeme/gouvernement-numerique/securite-confidentialite-ligne/orientation-sur-mots-passe.html#toc3-2">les recommandations sur les mots de passe</a> pour les propriétaires de systèmes du GC.</div><div class="bubble answer inlineblock">Cette option n’est pas possible actuellement dans Saba.</div><div class="bubble answer inlineblock">Oui, vous recevrez une notification déclenchée par Saba.</div><div class="bubble answer inlineblock">Toute activité d'apprentissage tirée du catalogue de Saba que vous réalisez sera dorénavant saisie dans votre historique de formation. La seule information qui a été migrée depuis les anciens systèmes vers Saba est l'historique d'apprentissage essentiel associé à une exigence permanente en matière de formation ou au renouvellement d'une certification. Pour enregistrer un historique complet de votre apprentissage, vous devrez peut-être ajouter des activités à votre historique d'apprentissage dans Saba. Consultez l'aide-mémoire « <a target="_blank" href=" https://iservice.prv/fra/college/saba/ajouter-cours-complete.shtml">Ajouter un cours complété</a> » pour apprendre comment ajouter un cours complété à votre profil.</div><div class="bubble answer inlineblock">Communiquez avec votre chef d'équipe ou superviseur pour demander une tentative supplémentaire d'examen.</div><div class="bubble answer inlineblock">Soumettez une demande à <a target="_blank" href=" https://iservice.prv/fra/giti/isn/index.shtml">InfoService national</a> afin d'obtenir une tentative supplémentaire pour votre employé. Fournissez le nom du membre de votre équipe ainsi que le nom du cours en question. À la suite de votre demande, l'Équipe nationale de Saba ajoutera une tentative supplémentaire.</div><div class="bubble answer inlineblock">Pour ajouter une formation complétée en dehors de Saba à votre profil Saba, veuillez consulter l'aide-mémoire « <a target="_blank" href=" https://iservice.prv/fra/college/saba/ajouter-cours-complete.shtml">Ajouter un cours complété</a> ».</div><div class="bubble answer inlineblock">Pour tout autre problème technique, veuillez soumettre une demande à <a target="_blank" href=" https://iservice.prv/fra/giti/isn/index.shtml">InfoService national</a>.</div><div class="bubble answer inlineblock">Soumettez une demande à l'<a target="_blank" href=" https://iservice.prv/fra/giti/isn/index.shtml">InfoService national</a> pour demander le rôle de gestionnaire. Pour plus d'information, veuillez consulter la page « <a target="_blank" href=" https://iservice.prv/fra/college/saba/gestionnaires.shtml">Gestionnaires</a> ».</div><div class="bubble answer inlineblock">Les gestionnaires ne peuvent pas modifier leur équipe. Les apprenants sont responsables de garder leur gestionnaire à jour, et l'équipe Infrastructure d'apprentissage peut aider quand ce n'est pas possible. <br><br>
+Pour ajouter un membre à votre équipe, vous devrez demander à l'employé de mettre à jour son gestionnaire dans leur profil. Consultez l'aide-mémoire « <a target="_blank" href="http://dialogue/grp/learning-apprentissage/Shared%20Documents/16-CLG-CLS-TRG-Roadmap-JobAid-ChangerGestionnaire04Dec2017-FR-FINAL.docx">Changer votre gestionnaire dans Saba (DOCX, 382 Ko)</a> ». <br><br>
+Pour retirer un membre de votre équipe, vous devrez soumettre une demande à l'<a target="_blank" href="https://iservice.prv/fra/giti/isn/index.shtml">InfoService national</a>.</div></div>
 <div class="hidden">
 <p class="bubble answer built-in-answers">Let me search in my database to see if I can find some useful information. One moment please.</p>
 <p class="bubble answer built-in-answers"></p>
@@ -144,7 +122,7 @@
 
 </div> <!-- end VirtualAssistantDiv -->
 </div> <!-- end outerVirtualAssistantDiv -->
-	
+
 <script>
 
 init();
