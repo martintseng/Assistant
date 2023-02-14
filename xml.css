@@ -2,15 +2,15 @@
 	/*Div that contains everything. the master div.*/
 	width: 100%;
 	height:100%;
-	overflow-y: hidden;
 	position: relative;
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 16px;
 	/*Paragraph interligns Spacing*/
 	
-	line-height: 55%;
+	line-height: 60%;
+	overflow-y: hidden;
 }
 
 
@@ -24,26 +24,12 @@
 	filter: brightness(0) invert(1);
 	padding-top: 5px;
 	
-	height:20px;
-	width: 20px;
+	height:25px;
+	width: 25px;
 }
 
 
-.assistantContainer{
-	/*Top div that contains the button and the message "Need Technical Assistance?*/
-	/*setting width and height for the assistant frame as well.*/
-	visibility: hidden;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
-.assistantFrame{
-	/*The frame needs to be 100^ in width and set in height.*/
-	width: 100%;
-	padding-top:5px;
-	height: 430px;
-	border-width: 0px;
-}
+
 .canvas{
 	/*The frame needs to be 100^ in width and set in height.*/
 	width: 100%;
@@ -59,6 +45,7 @@
 }
 .bottomBannerContainer{
 	background-color:rgb(19, 96, 125);
+	padding-top: 20px;
 	padding-bottom: 10px;
 }
 
@@ -105,7 +92,7 @@ ul li { padding: 5px 0px; }
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	height:225px;
+	height:300px;
 	object-fit: cover;
 }
 .assistantLinkButton{
@@ -121,3 +108,20 @@ ul li { padding: 5px 0px; }
 	text-decoration: none;
 	display: inline-block;
 }
+
+/* only use this if we want the assistant back into SABA (clicking on virtual assistant will no longer open a new window) */
+/*
+.assistantContainer{
+	visibility: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.assistantFrame{
+	
+	width: 100%;
+	padding-top:5px;
+	height: 430px;
+	border-width: 0px;
+}
+*/
