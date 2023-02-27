@@ -5,17 +5,23 @@
 }
 
  
+body { margin: 0;
 
+background-color: #13607d;
+overflow-y: hidden;
+min-height: 10px; 
+height: 100%; 
+padding-bottom: 0px; 
+margin: 0px;
+padding-top: 0px;
+
+}
 
 .canvas{
 /* This class is found in the XML files */
 }
 .canvasDiv{
-overflow-y: hidden;
-min-height: 10px;
-height: 100%;
-padding-bottom: 0px;
-margin: 0px;
+
 }
 
 .buttonContainer{ position: relative; margin: .5em; }
