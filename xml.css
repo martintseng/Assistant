@@ -25,6 +25,7 @@ margin: 0px;
 }
 
 .canvas{
+/* This class is found in the XML files */
 
 overflow-y: hidden;
 
