@@ -13,6 +13,7 @@
 .canvasDiv{
 overflow-y: hidden;
 min-height: 10px;
+width:100%;
 height: 100%;
 padding-bottom: 0px;
 margin: 0px;
