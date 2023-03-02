@@ -31,9 +31,9 @@ function init(){
 	
 	var message = document.createElement("p");
 	if (isEnglish){
-		message.innerText = "Hello, my name is Lit. How may I help you today?";
+		message.innerText = "Hello, how may I help you today?";
 	}else {
-		message.innerText = "Bonjour, mon nom est Lit. Comment puis-je vous aider?";
+		message.innerText = "Bonjour, comment puis-je vous aider?";
 	}
 	assistantTypes(message);
 }
