@@ -246,12 +246,13 @@ function userTypes(elmt){
 	
 	td1.appendChild(elmt);
 	cell.appendChild(td1);
-			
+
+	
 	const td2 = document.createElement("td")
 	td2.classList.add("userIconTD")
 	td2.appendChild(img);	
 	cell.appendChild(td2);
-	
+
 	
 	
 	
@@ -299,6 +300,7 @@ function assistantTypes(elmt){
 			cell.appendChild(td2);
 			
 			
+			
 			if (firstTime == true){
 				firstTime = false;
 			}else {
@@ -306,14 +308,21 @@ function assistantTypes(elmt){
 				message.classList.add("bubble");
 				message.classList.add("assistant");
 				message.classList.add("inlineblock");
+				
+				
+				var link = document.createElement('a');
+				link.href = 'nc-siga-saba-apprentissage-ilms-saba-learning-gd@hrsdc-rhdcc.gc.ca';
+				
+				
+				if (isEnglish){
+					message.innerText = "If this does not answer your question, you may send your inquiry at our ";
+					link.textContent = 'GD Box.';
+				}else {
+					message.innerText = "Si ceci ne répond pas à votre question, vous pouvez envoyer votre question à notre";
+					link.textContent = 'boîte GD.';
+				}
 			
-			
-				//if (isEnglish){
-				//	message.innerText = "Is there anything else that I can help you with?";
-				//}else {
-				//	message.innerText = "Y a-t-il autre chose que je peux vous aider ?";
-				//}
-			
+
 				
 				
 				var rows = document.getElementById("QNA").getElementsByTagName("tr").length;
@@ -322,17 +331,22 @@ function assistantTypes(elmt){
 				
 				const td1 = document.createElement("td");
 				td1.classList = "userIconTD"
-				
 				cell.appendChild(td1);
+				
+				
 				const td2 = document.createElement("td")
-				td2.appendChild(message);	
+				td2.appendChild(message);
+				message.appendChild(link)
 				cell.appendChild(td1);
 				cell.appendChild(td2);
-
+				
 				
 				
 				scrollDownOfDiv("conversationDiv");
 			}
+		
+			
+			
 			
 		}
 		
