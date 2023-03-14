@@ -114,7 +114,7 @@ function isMatchKeywords(messageParts, keywords) {
 	
 	//Checking if the message sent by user has any matching keywords to our answers.
 	for (let i = 0; i < messageParts.length; i++) {
-		if (messageParts[i].length > 3){
+		if (messageParts[i].length > 1){
 			var messagePartLcase = messageParts[i].toLowerCase();
 			var keywordsLcase = keywords.toLowerCase();
 			if (keywordsLcase.search(messagePartLcase) >= 0 ){ 
