@@ -350,7 +350,7 @@ button{
 }
 
 
-ul {
+ul, ol, li {
   list-style-position: inside;
 }
 
