@@ -31,9 +31,9 @@ function init(){
 	
 	var message = document.createElement("p");
 	if (isEnglish){
-		message.innerText = "Hello, how may I help you today?";
+		message.innerText = "Hello, my name is Sam. How may I help you today?";
 	}else {
-		message.innerText = "Bonjour, comment puis-je vous aider?";
+		message.innerText = "Bonjour, mon nom est Sam. Comment puis-je vous aider?";
 	}
 	assistantTypes(message);
 }
@@ -316,10 +316,10 @@ function assistantTypes(elmt){
 				
 				if (isEnglish){
 					message.innerText = "If this does not answer your question, you may send your inquiry at our ";
-					link.textContent = 'GD Box.';
+					link.textContent = 'nc-siga-saba-apprentissage-ilms-saba-learning-gd@hrsdc-rhdcc.gc.ca';
 				}else {
 					message.innerText = "Si ceci ne répond pas à votre question, vous pouvez envoyer votre question à notre";
-					link.textContent = 'boîte GD.';
+					link.textContent = 'nc-siga-saba-apprentissage-ilms-saba-learning-gd@hrsdc-rhdcc.gc.ca';
 				}
 			
 
