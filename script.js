@@ -315,10 +315,10 @@ function assistantTypes(elmt){
 				
 				
 				if (isEnglish){
-					message.innerText = "If this does not answer your question, you may send your inquiry at our ";
+					message.innerText = "If this does not answer your question, you may send your inquiry at ";
 					link.textContent = 'nc-siga-saba-apprentissage-ilms-saba-learning-gd@hrsdc-rhdcc.gc.ca';
 				}else {
-					message.innerText = "Si ceci ne répond pas à votre question, vous pouvez envoyer votre question à notre";
+					message.innerText = "Si ceci ne répond pas à votre besoin, vous pouvez envoyer votre question au";
 					link.textContent = 'nc-siga-saba-apprentissage-ilms-saba-learning-gd@hrsdc-rhdcc.gc.ca';
 				}
 			
