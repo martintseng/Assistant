@@ -318,7 +318,7 @@ function assistantTypes(elmt){
 					message.innerText = "If this does not answer your question, you may send your inquiry at ";
 					link.textContent = 'nc-siga-saba-apprentissage-ilms-saba-learning-gd@hrsdc-rhdcc.gc.ca';
 				}else {
-					message.innerText = "Si ceci ne répond pas à votre besoin, vous pouvez envoyer votre question au";
+					message.innerText = "Si ceci ne répond pas à votre besoin, vous pouvez envoyer votre question au ";
 					link.textContent = 'nc-siga-saba-apprentissage-ilms-saba-learning-gd@hrsdc-rhdcc.gc.ca';
 				}
 			
