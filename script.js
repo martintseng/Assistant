@@ -21,7 +21,8 @@ function init(){
 		if (language == "Français"){
 			isEnglish = true;
 		} else {
-			isEnglish = false;
+			//Used to be false.
+			isEnglish = true;
 		}
 	}
 	
