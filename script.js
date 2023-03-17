@@ -22,7 +22,7 @@ function init(){
 			isEnglish = true;
 		} else {
 			//Used to be false.
-			isEnglish = true;
+			isEnglish = false;
 		}
 	}
 	
