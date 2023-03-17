@@ -98,7 +98,7 @@ function sendMessage(){
 			var message = document.createElement("p");
 			
 			if (isEnglish){
-				message.innerText = "I am sorry, I did not find any information related to these keywords. Care to try again?";
+				message.innerText = "There were no information related to these keywords. Please use different keywords.";
 			}else {
 				message.innerText = "Désolé, je n'ai pas trouvé de l'information liée à ces mots-clés. Voulez-vous réessayer ?";
 			}
