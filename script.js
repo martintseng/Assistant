@@ -305,6 +305,9 @@ function assistantTypes(elmt){
 			if (firstTime == true){
 				firstTime = false;
 			}else {
+				
+				
+				//This code that is commented was to put a note on each answer so to let the user know that they can send an email to NSD
 				var message = document.createElement("p");
 				message.classList.add("bubble");
 				message.classList.add("assistant");
@@ -312,18 +315,18 @@ function assistantTypes(elmt){
 				
 				
 				var link = document.createElement('a');
-				link.href = 'nc-siga-saba-apprentissage-ilms-saba-learning-gd@hrsdc-rhdcc.gc.ca';
+				link.href = 'mailto:nc-siga-saba-apprentissage-ilms-saba-learning-gd@hrsdc-rhdcc.gc.ca';
 				
 				
 				if (isEnglish){
-					message.innerText = "If this does not answer your question, you may send your inquiry at ";
-					link.textContent = 'mailto:nc-siga-saba-apprentissage-ilms-saba-learning-gd@hrsdc-rhdcc.gc.ca';
+					message.innerText = "If this does not answer your question, you may send your inquiry at the ";
+					link.textContent = 'National Service Desk';
 				}else {
-					message.innerText = "Si ceci ne répond pas à votre besoin, vous pouvez envoyer votre question au ";
-					link.textContent = 'mailto:nc-siga-saba-apprentissage-ilms-saba-learning-gd@hrsdc-rhdcc.gc.ca';
+					message.innerText = "Si ceci ne répond pas à votre besoin, vous pouvez envoyer votre question à l'";
+					link.textContent = 'InfoService national';
 				}
 			
-
+				
 				
 				
 				var rows = document.getElementById("QNA").getElementsByTagName("tr").length;
@@ -335,12 +338,13 @@ function assistantTypes(elmt){
 				cell.appendChild(td1);
 				
 				
+				//This appends the note below the answer.
 				const td2 = document.createElement("td")
 				td2.appendChild(message);
 				message.appendChild(link)
 				cell.appendChild(td1);
 				cell.appendChild(td2);
-				
+
 				
 				
 				scrollDownOfDiv("conversationDiv");
