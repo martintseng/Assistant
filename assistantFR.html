@@ -2,83 +2,83 @@
 <html>
 <head>
 	
-	<title>SABA Assistant Virtuel</title>
-	
+	<title>SABA Virtual Assistant</title>
 	<!-- <link rel="stylesheet" href="https://eia-lit.github.io/Assistant/style.css"> -->
 	<!--  <script src="https://eia-lit.github.io/Assistant/script.js"></script>  -->
+	
 	
 	<!-- <link rel="stylesheet" href="style.css"> -->
 	<!--  <script src="script.js"></script>  -->
 	
 <link rel="stylesheet" href="https://eia-lit.github.io/Assistant/style.css">
 <script src="https://eia-lit.github.io/Assistant/script.js"></script>
-	
-	
+
 </head>
 <body>
 
 <!-- Start of Virtual Assistant. -->
- <div id="outerVirtualAssistantDiv">
- <div id="virtualAssistantDiv">
-  <div id="outerLeftDiv">
-  <div id="leftDiv">
-   <div class="headerDiv">
-    <div class="header">
-    <h3 class="headerBanner left">Assistant Virtuel</h3>
-    </div>
-    <!-- Language Switch here. -->
-    <div id="language"><a class="light" href="https://eia-lit.github.io/Assistant/assistantEN">English</a></div>
-    
-    
-   </div>
-   
-   <div id="conversationDiv">
-    <table id="QNA">
-     <!-- COVERSATION WILL BE HERE -->
-    </table>
-   
-  
-   <div id="typingBubble">
-    <table>
-     <tr><td class="left">
-     <!-- typing animation -->
-    <div id="typing" class="bubble assistant inlineblock center">
-     <table class="center">
-      <tr>
-       <td class="animate1">.</td>
-       <td class="animate2">.</td>
-       <td class="animate3">.</td>
-      </tr>
-     </table>
-    </div>
-    </td></tr>
-    </table>
-   </div> <!-- ebd if typing bubble -->
-   </div> <!-- end of conversationDiv -->
-  <div class="messageBar">
-   <div class="messageForm">
-    <input id="textbox" placeholder="Saisissez votre question ou votre message " name="msg" autocomplete="off" type="text">
-    <button id="send" onclick="sendMessage()">Envoyer</button>
-   </div>
-  </div>
-  
-  
-  </div> <!-- end of leftDiv. -->
-  </div> <!-- end of outerLeftDiv. -->
-  
-  <div id="outerRightDiv">
-  <div id="rightDiv">
-   <div class="headerDiv">
-    <div class="header">
-    <h3 class="headerBanner left">Questions suggérées</h3>
-   </div>
-   <button id="closeChatButton" class="closeButton" onclick="closeChatBox()">Fermer la fenêtre</button>
-  </div>
+	<div id="outerVirtualAssistantDiv">
+	<div id="virtualAssistantDiv">
+		<div id="outerLeftDiv">
+		<div id="leftDiv">
+			<div class="headerDiv">
+				<div class="header">
+				<h3 class="headerBanner left">Virtual Assistant</h3>
+				</div>
+				<!-- Language Switch here. -->
+				<div id="language"><a class="light" href="https://eia-lit.github.io/Assistant/assistantFR">English</a></div>
+				
+				
+			</div>
+			
+			<div id="conversationDiv">
+				<table id="QNA">
+					<!-- COVERSATION WILL BE HERE -->
+				</table>
+			
+		
+			<div id="typingBubble">
+				<table>
+					<tr><td class="left">
+					<!-- typing animation -->
+				<div id="typing" class="bubble assistant inlineblock center">
+					<table class="center">
+						<tr>
+							<td class="animate1">.</td>
+							<td class="animate2">.</td>
+							<td class="animate3">.</td>
+						</tr>
+					</table>
+				</div>
+				</td></tr>
+				</table>
+			</div> <!-- ebd if typing bubble -->
+			</div> <!-- end of conversationDiv -->
+		<div class="messageBar">
+			<div class="messageForm">
+				<input id="textbox" placeholder="Type your question or type your message" name="msg" autocomplete="off" type="text">
+				<button id="send" onclick="sendMessage()">Send</button>
+			</div>
+		</div>
+		
+		
+		</div> <!-- end of leftDiv. -->
+		</div> <!-- end of outerLeftDiv. -->
+		
+		<div id="outerRightDiv">
+			<div id="rightDiv">
+				<div class="headerDiv">
+					<div class="header">
+						<h3 class="headerBanner left">Suggested Questions</h3>
 
-
-
+					</div>
+						<button id="closeChatButton" class="closeButton" onclick="closeChatBox()">Close Window</button>
+				</div>
+				
+				
 <div class="rightOptions">
 <div id="questions">
+
 
 
 <button class="bubble question default" onclick="sendQuestion(1)">Comment puis-je obtenir un compte Saba ?</button><p class="keywords">saba, compte, acces</p>
@@ -104,21 +104,24 @@
 <button class="bubble question hidden" onclick="sendQuestion(21)">En tant que gestionnaire, que dois-je faire pour m'assurer que mes rapports sont exacts ?</button><p class="keywords">rapport, rapports</p>
 
 
+</div>
 
+	
 
+<!-- Built in Questions, do not touch! -->
 <div id="built-in-questions">
+
 <button class="bubble question hidden" onclick="listInitialQuestions()">Afficher les questions initales.</button>
 <button class="bubble question" onclick="listAllQuestions()">Afficher toutes les questions.</button>
+
 <br><!-- need this break to space the bottom scrollbar -->
-</div><!-- Put your answers here, and make sure to include the same classes as the other answers (bubble and answer). -->
+</div>
 
-	
-	
-
-
+<!-- Put your answers here, and make sure to include the same classes as the other answers (bubble and answer). -->
 <!-- Please make sure that you have the exact number of answers as the number of questions. ANSWERS MUST BE in the same ORDER corresponding to the question above. -->
 <!-- Example: Question #3: How do I reset my password. Answer#3: You can reset your passsword here. -->
 <div id="answers" class="hidden">
+
 
 
 <div class="bubble answer inlineblock"><p>Veuillez suivre les directives pr&eacute;sent&eacute;es dans&nbsp;: &laquo; <a target="_blank" href="https://iservice.prv/fra/college/saba/premiere-fois.shtml">Acc&eacute;der &agrave; votre compte Saba pour la premi&egrave;re fois</a> &raquo;.</p><br>
@@ -198,10 +201,7 @@
 <p>Veuillez noter que si vos donn&eacute;es ne sont pas &agrave; jour, un taux d&rsquo;ach&egrave;vement de 100% ne sera pas r&eacute;alisable.</p></div>
 
 
-
-
-
-
+</div>
 
 <div class="hidden">
 <p class="bubble answer built-in-answers">Let me search in my database to see if I can find some useful information. One moment please.</p>
@@ -213,7 +213,7 @@
 
 </div> <!-- end VirtualAssistantDiv -->
 </div> <!-- end outerVirtualAssistantDiv -->
-
+	
 <script>
 
 init();
