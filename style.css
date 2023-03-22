@@ -106,13 +106,13 @@ button{
 }
 
 .user{
-	background-color: dodgerBlue;
+	background-color: #2E2E2E;
 	color: white;
-	align:right;
+	text-align:right;
 	
 }
 .assistant{
-	background-color: #e6e6e6;
+	background-color: #EBEBEB;
 }
 
 .center{
@@ -350,9 +350,15 @@ button{
 }
 
 
+
 ul, ol, li {
-  list-style-position: inside;
+  list-style-position: inside;  
 }
+ul, ol{
+	
+	margin-left:10px;
+}
+
 
 
 
