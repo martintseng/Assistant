@@ -108,7 +108,7 @@ button{
 .user{
 	background-color: #2E2E2E;
 	color: white;
-	text-align:right;
+	align:right;
 	
 }
 .assistant{
