@@ -32,11 +32,12 @@ function init(){
 	
 	var message = document.createElement("p");
 	if (isEnglish){
-		message.innerText = "Please select one of the questions found on the right hand side. If you need to filter the list of questions, you can type your inquiry in the message bar down below.";
+		message.innerText = "Hello, I am your Saba Virtual Assistant!\n\nTo begin, please select one of the questions to the right of this chat box, or enter a keyword or enquiry in the message bar below.";
 	}else {
-		message.innerText = "Veuillez sélectionner l'une des questions figurant sur le côté droit. Si vous souhaitez filtrer la liste des questions, vous pouvez taper votre demande dans la barre de message ci-dessous.";
+		message.innerText = "Bonjour, je suis votre Assistant virtuel Saba!\n\nPour commencer, veuillez sélectionnez l’une des questions à la droite de cette boîte de dialogue ou saisir un mot-clé ou une demande dans la barre de message ci-dessous.";
 	}
 	assistantTypes(message);
+
 }
 
 //user can type in messsage bar and send message here.
@@ -98,10 +99,12 @@ function sendMessage(){
 			var message = document.createElement("p");
 			
 			if (isEnglish){
-				message.innerText = "There were no information related to these keywords. Please use different keywords.";
+				message.innerText = "I’m sorry, I could not find any information on this. Please try a different keyword or enquiry.";
 			}else {
-				message.innerText = "Désolé, je n'ai pas trouvé de l'information liée à ces mots-clés. Voulez-vous réessayer ?";
+				message.innerText = "Je suis désolé, je n’ai trouvé aucune information à ce sujet. Veuillez essayer un autre mot-clé ou une autre question. ";
 			}
+			
+				
 			
 			assistantTypes(message);
 		}
@@ -319,14 +322,13 @@ function assistantTypes(elmt){
 				
 				
 				if (isEnglish){
-					message.innerText = "If this does not answer your question, you may send your inquiry at the ";
-					link.textContent = 'National Service Desk';
+					message.innerText = "If you require more assistance, contact the ";
+					link.textContent = 'National Service Desk.';
 				}else {
-					message.innerText = "Si ceci ne répond pas à votre besoin, vous pouvez envoyer votre question à l'";
-					link.textContent = 'InfoService national';
+					message.innerText = "Si vous avez besoin d’assistance supplémentaire, contactez l'";
+					link.textContent = 'InfoService national.';
 				}
 			
-				
 				
 				
 				var rows = document.getElementById("QNA").getElementsByTagName("tr").length;
