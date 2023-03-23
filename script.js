@@ -325,7 +325,7 @@ function assistantTypes(elmt){
 					message.innerText = "If you require more assistance, contact the ";
 					link.textContent = 'National Service Desk.';
 				}else {
-					message.innerText = "Si vous avez besoin d’assistance supplémentaire, contactez l'";
+					message.innerText = "Si vous avez besoin d’assistance supplémentaire, communiquez avec l'";
 					link.textContent = 'InfoService national.';
 				}
 			
