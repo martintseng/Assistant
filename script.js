@@ -318,7 +318,7 @@ function assistantTypes(elmt){
 				
 				
 				var link = document.createElement('a');
-				link.href = 'mailto:nc-siga-saba-apprentissage-ilms-saba-learning-gd@hrsdc-rhdcc.gc.ca';
+				link.href = 'https://iservice.prv/eng/imit/nsd/index.shtml';
 				
 				
 				if (isEnglish){
