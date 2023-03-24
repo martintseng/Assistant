@@ -319,6 +319,7 @@ function assistantTypes(elmt){
 				
 				var link = document.createElement('a');
 				link.href = 'https://iservice.prv/eng/imit/nsd/index.shtml';
+				link.target = 'blank';
 				
 				
 				if (isEnglish){
