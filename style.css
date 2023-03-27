@@ -86,6 +86,7 @@ button{
 
 .question{
 	display:block;
+	border-color: #D3D3D3;
 }
 .hidden{
 	visibility: hidden;
