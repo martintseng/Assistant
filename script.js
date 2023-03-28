@@ -74,9 +74,9 @@ function sendMessage(){
 			var message = document.createElement("p");
 
 			if (isEnglish){
-				message.innerText = "I may have found some information related to your keyword(s). Please find the information located on the right hand side.";
+				message.innerText = "I think I can help you with that! Please find information related to your keyword or enquiry to the right of this chat box.";
 			}else {
-				message.innerText = "J’ai peut-être trouvé de l'information liée à votre mot-clé. Veuillez SVP la retrouver à droite de l'écran.";
+				message.innerText = "Je crois pouvoir vous aider avec ceci! Veuillez trouver les informations relatives à votre mot-clé ou à votre demande à la droite de cette boîte de dialogue.";
 			}
 			
 			
