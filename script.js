@@ -34,7 +34,7 @@ function init(){
 	if (isEnglish){
 		message.innerText = "Hello, I am your Saba Virtual Assistant!\n\nTo begin, please select one of the questions to the right of this chat box, or enter a keyword or enquiry in the message bar below.";
 	}else {
-		message.innerText = "Bonjour, je suis votre Assistant virtuel Saba!\n\nPour commencer, veuillez sélectionnez l’une des questions à la droite de cette boîte de dialogue ou saisir un mot-clé ou une demande dans la barre de message ci-dessous.";
+		message.innerText = "Bonjour, je suis votre Assistant virtuel Saba!\n\nPour commencer, veuillez sélectionner l’une des questions à la droite de cette boîte de dialogue ou saisir un mot-clé ou une demande dans la barre de message ci-dessous.";
 	}
 	assistantTypes(message);
 
