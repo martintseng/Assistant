@@ -318,14 +318,17 @@ function assistantTypes(elmt){
 				
 				
 				var link = document.createElement('a');
-				link.href = 'https://iservice.prv/eng/imit/nsd/index.shtml';
+				
+				
 				link.target = 'blank';
 				
 				
 				if (isEnglish){
+					link.href = 'http://srmis-sigdi-iagent.prv/en';
 					message.innerText = "If you require more assistance, contact the ";
 					link.textContent = 'National Service Desk.';
 				}else {
+					link.href = 'http://srmis-sigdi-iagent.prv/fr';
 					message.innerText = "Si vous avez besoin d’assistance supplémentaire, communiquez avec l'";
 					link.textContent = 'InfoService national.';
 				}
