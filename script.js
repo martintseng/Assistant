@@ -265,7 +265,6 @@ function userTypes(elmt){
 }
 
 
-
 function assistantTypes(elmt){
 	
 	elmt.classList.add("bubble");
@@ -317,24 +316,50 @@ function assistantTypes(elmt){
 				message.classList.add("inlineblock");
 				
 				
-				var link = document.createElement('a');
-				
-				
-				link.target = 'blank';
+				var nationalLink = document.createElement('a');
+				nationalLink.href = 'https://iservice.prv/eng/imit/nsd/index.shtml';
+				nationalLink.target = 'blank';
 				
 				
 				if (isEnglish){
-					link.href = 'http://srmis-sigdi-iagent.prv/en';
 					message.innerText = "If you require more assistance, contact the ";
-					link.textContent = 'National Service Desk.';
+					nationalLink.textContent = 'National Service Desk';
 				}else {
-					link.href = 'http://srmis-sigdi-iagent.prv/fr';
 					message.innerText = "Si vous avez besoin d’assistance supplémentaire, communiquez avec l'";
-					link.textContent = 'InfoService national.';
+					nationalLink.textContent = 'InfoService national';
 				}
-			
+				message.appendChild(nationalLink);
+				message.append(".");
 				
 				
+				var surveyMessage = document.createElement("p");
+				var surveyLink = document.createElement('a');
+				
+				surveyLink.href = 'https://forms.office.com/Pages/ResponsePage.aspx?id=RljVnoGKRkKs2LGgGr_A0Rpgr_uBAAVNpXqsYz-z7BlUOVg5NDdIVUhDN1g1OEpGNEZVT1RYVlhOQi4u';
+				surveyLink.target = 'blank';
+				
+				if (isEnglish){
+					surveyMessage.append("How did I do? Please take this short ");
+					surveyLink.textContent = 'survey';
+					//survey to help me improve and serve you better!");
+				}else {
+					surveyMessage.append("Que pensez-vous de mon travail ? Répondez à ce court ");
+					surveyLink.textContent = 'questionnaire';
+				}
+				
+				surveyMessage.appendChild(surveyLink);
+				message.append(surveyMessage);
+				
+				
+				if (isEnglish){
+					surveyMessage.append(" to help me improve and serve you better!");
+				}else {
+					surveyMessage.append(" pour m'aider à m'améliorer et à mieux vous servir !");
+				}
+				
+				
+				
+				//adjust the format of the table 
 				var rows = document.getElementById("QNA").getElementsByTagName("tr").length;
 				var row = document.getElementById("QNA").insertRow(rows);
 				var cell = row.insertCell(0);
@@ -343,32 +368,23 @@ function assistantTypes(elmt){
 				td1.classList = "userIconTD"
 				cell.appendChild(td1);
 				
-				
 				//This appends the note below the answer.
 				const td2 = document.createElement("td")
 				td2.appendChild(message);
-				message.appendChild(link)
 				cell.appendChild(td1);
 				cell.appendChild(td2);
 
 				
-				
 				scrollDownOfDiv("conversationDiv");
 			}
-		
-			
-			
-			
 		}
-		
-		
 		
 	}, 600); 
 	isTyping = false
 	
-	
-	
 }
+
+
 
 
 function toggleChatBox(){
