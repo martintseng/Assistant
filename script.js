@@ -317,15 +317,18 @@ function assistantTypes(elmt){
 				
 				
 				var nationalLink = document.createElement('a');
-				nationalLink.href = 'https://iservice.prv/eng/imit/nsd/index.shtml';
+				
+				
 				nationalLink.target = 'blank';
 				
 				
 				if (isEnglish){
 					message.innerText = "If you require more assistance, contact the ";
+					nationalLink.href = 'https://iservice.prv/eng/imit/nsd/index.shtml';
 					nationalLink.textContent = 'National Service Desk';
 				}else {
 					message.innerText = "Si vous avez besoin d’assistance supplémentaire, communiquez avec l'";
+					nationalLink.href = 'https://iservice.prv/fra/giti/isn/index.shtml';
 					nationalLink.textContent = 'InfoService national';
 				}
 				message.appendChild(nationalLink);
