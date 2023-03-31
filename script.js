@@ -331,6 +331,8 @@ function assistantTypes(elmt){
 				message.appendChild(nationalLink);
 				message.append(".");
 				
+				var messageBreak = document.createElement("br");
+				message.appendChild(messageBreak);
 				
 				var surveyMessage = document.createElement("p");
 				var surveyLink = document.createElement('a');
@@ -352,9 +354,9 @@ function assistantTypes(elmt){
 				
 				
 				if (isEnglish){
-					surveyMessage.append(" to help me improve and serve you better!");
+					surveyMessage.append(" to help me improve and serve you better! In the upper right-hand corner of the survey, you will find options to select the language of your choice and/or using the immersive reader");
 				}else {
-					surveyMessage.append(" pour m'aider à m'améliorer et à mieux vous servir !");
+					surveyMessage.append(" pour m'aider à m'améliorer et à mieux vous servir ! Dans le coin supérieur droit du questionnaire, vous trouverez des options pour sélectionner la langue de votre choix et/ou en utilisant le lecteur immersif.");
 				}
 				
 				
