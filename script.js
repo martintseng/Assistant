@@ -32,9 +32,9 @@ function init(){
 	
 	var message = document.createElement("p");
 	if (isEnglish){
-		message.innerText = "Hello, I am your Saba Virtual Assistant!\n\nTo begin, please select one of the questions to the right of this chat box, or enter a keyword or enquiry in the message bar below.";
+		message.innerText = "Hello, I am your Saba Virtual Assistant!\n\nTo begin, please select one of the questions to the right, or enter a keyword or enquiry in the message bar below.";
 	}else {
-		message.innerText = "Bonjour, je suis votre Assistant virtuel Saba!\n\nPour commencer, veuillez sélectionner l’une des questions à la droite de cette boîte de dialogue ou saisir un mot-clé ou une demande dans la barre de message ci-dessous.";
+		message.innerText = "Bonjour, je suis votre Assistant virtuel Saba!\n\nPour commencer, veuillez sélectionner l’une des questions à la droite ou saisir un mot-clé ou une demande dans la barre de message ci-dessous.";
 	}
 	assistantTypes(message);
 
@@ -348,7 +348,6 @@ function assistantTypes(elmt){
 				if (isEnglish){
 					surveyMessage.append("How did I do? Please take this short ");
 					surveyLink.textContent = 'survey';
-					//survey to help me improve and serve you better!");
 				}else {
 					surveyMessage.append("Que pensez-vous de mon travail ? Répondez à ce court ");
 					surveyLink.textContent = 'questionnaire';
