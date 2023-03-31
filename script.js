@@ -332,9 +332,9 @@ function assistantTypes(elmt){
 				message.append(".");
 				
 				var messageBreak = document.createElement("br");
-				var messageBreak2 = document.createElement("br");
+
 				message.appendChild(messageBreak);
-				message.appendChild(messageBreak2);
+
 				
 				var messageBreak = document.createElement("br");
 				message.appendChild(messageBreak);
