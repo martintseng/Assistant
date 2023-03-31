@@ -334,11 +334,11 @@ function assistantTypes(elmt){
 				message.appendChild(nationalLink);
 				message.append(".");
 				
+				
+				/*
 				var messageBreak = document.createElement("br");
-
 				message.appendChild(messageBreak);
 
-				
 				var messageBreak = document.createElement("br");
 				message.appendChild(messageBreak);
 				
@@ -366,7 +366,7 @@ function assistantTypes(elmt){
 					surveyMessage.append(" pour m'aider à m'améliorer et à mieux vous servir ! Dans le coin supérieur droit du questionnaire, vous trouverez des options pour sélectionner la langue de votre choix et/ou en utilisant le lecteur immersif.");
 				}
 				
-				
+				*/
 				
 				//adjust the format of the table 
 				var rows = document.getElementById("QNA").getElementsByTagName("tr").length;
