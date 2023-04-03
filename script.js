@@ -335,7 +335,8 @@ function assistantTypes(elmt){
 				message.append(".");
 				
 				
-				/*
+				//Start of the Questionnaire code. Comment this block if you want to omit the questionnaire.
+				
 				var messageBreak = document.createElement("br");
 				message.appendChild(messageBreak);
 
@@ -366,7 +367,8 @@ function assistantTypes(elmt){
 					surveyMessage.append(" pour m'aider à m'améliorer et à mieux vous servir ! Dans le coin supérieur droit du questionnaire, vous trouverez des options pour sélectionner la langue de votre choix et/ou en utilisant le lecteur immersif.");
 				}
 				
-				*/
+				//End  of questionnaire code.
+				
 				
 				//adjust the format of the table 
 				var rows = document.getElementById("QNA").getElementsByTagName("tr").length;
