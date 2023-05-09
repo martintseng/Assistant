@@ -203,21 +203,22 @@ function displayAllQuestions(){
 }
 
 
-function sendQuestion(x) {
+function findAnswer(x) {
 	
-	var questionElement = document.getElementById("questions").getElementsByTagName("button")[x - 1];
+	var questionElement = document.getElementById("Q" + x.toString());
 	var question = document.createElement("p");
 	question.innerText = questionElement.innerText;
 	userTypes(question);
 
-	var answerElement = document.getElementById("answers").getElementsByClassName("answer")[x - 1];
+	var answerElement = document.getElementById("A" + x.toString());
 	var answer = document.createElement("p");
 	answer.innerHTML = answerElement.innerHTML;
-	
+
 	assistantTypes(answer);
 	
 	//Scroll down of the div.
 	scrollDownOfDiv("conversationDiv")
+	
 	
 }  
 
