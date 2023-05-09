@@ -9,9 +9,12 @@
 	
 	<!-- <link rel="stylesheet" href="style.css"> -->
 	<!--  <script src="script.js"></script>  -->
+
+
+	<link rel="stylesheet" href="https://eia-lit.github.io/Assistant/style.css">
+	<script src="https://eia-lit.github.io/Assistant/script.js"></script>
 	
-<link rel="stylesheet" href="https://eia-lit.github.io/Assistant/style.css">
-<script src="https://eia-lit.github.io/Assistant/script.js"></script>
+
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3L70XRP72Z"></script>
@@ -87,27 +90,27 @@
 				</div>
 <div class="rightOptions">
 <div id="questions">
-<button class="bubble question default" onclick="sendQuestion(1)">How do I get a Saba account?</button><p class="keywords">saba, account, access</p>
-<button class="bubble question default" onclick="sendQuestion(2)">How can I access my Saba Account for the first time?</button><p class="keywords">saba, account, access</p>
-<button class="bubble question default" onclick="sendQuestion(3)">When I try to reset my Saba password, it doesn’t work.</button><p class="keywords">peoplesoft, reset, password, pass, pwd</p>
-<button class="bubble question default" onclick="sendQuestion(4)">How do I reset my Saba password if forgotten?</button><p class="keywords">peoplesoft, reset, password, pass, pwd</p>
-<button class="bubble question default" onclick="sendQuestion(5)">How do I update my manager in Saba?</button><p class="keywords">manager, team lead</p>
-<button class="bubble question hidden" onclick="sendQuestion(6)">I cannot find my manager in Saba.</button><p class="keywords">manager, team lead</p>
-<button class="bubble question hidden" onclick="sendQuestion(7)">I need manager/team lead access in Saba.</button><p class="keywords">manager, team lead</p>
-<button class="bubble question hidden" onclick="sendQuestion(8)">How do I add completed learning in Saba if the course was completed on another learning system? (Including Essential Training Curriculum [ETC] courses completed on the Canada School of Public Service Learning Platform [CSPS]).</button><p class="keywords">completed, complete, learning, add, etc</p>
-<button class="bubble question hidden" onclick="sendQuestion(9)">How do I add completed learning from Canada School of Public Service (CSPS) to Saba (for example – Essential Training Curriculum- [ETC])?</button><p class="keywords">completed, complete, learning, add, etc</p>
-<button class="bubble question hidden" onclick="sendQuestion(10)">An employee has exhausted all attempts at passing a test. How do I add an attempt?</button><p class="keywords">attempts, attempt, exhausted, tries, test</p>
-<button class="bubble question hidden" onclick="sendQuestion(11)">I have exhausted all attempts at passing a test. How can I get another attempt?</button><p class="keywords">attempts, attempt, exhausted, tries, test</p>
-<button class="bubble question default" onclick="sendQuestion(12)">I already completed an Essential Training Curriculum (ETC) course at a previous department. Do I need to take the course again at ESDC?</button><p class="keywords">essential, etc, curriculum</p>
-<button class="bubble question default" onclick="sendQuestion(13)">How can I ensure that the Essential Training Curriculum (ETC) courses I am directed to take through Canada School of Public Service (CSPS) are included in my Saba profile?</button><p class="keywords">essential, etc, curriculum, School of Public Service, CSPS, school</p>
-<button class="bubble question default" onclick="sendQuestion(14)">How quickly will my Saba profile be updated with my completion results once I complete an Essential Training Curriculum (ETC) course on the Canada School of Public Service (CSPS) Learning Platform?</button><p class="keywords">essential, etc, curriculum, School of Public Service, CSPS, school</p>
-<button class="bubble question default" onclick="sendQuestion(15)">I completed an Essential Training Curriculum (ETC) course in the Canada School of Public Service (CSPS) Learning Platform more than a week ago, yet it is not showing up in my Saba learning history as complete. What do I do?</button><p class="keywords">essential, etc, curriculum, School of Public Service, CSPS, school</p>
-<button class="bubble question hidden" onclick="sendQuestion(16)">How do I make sure my Indigenous Awareness and Reconciliation learning is accurately captured in my Saba learning history?</button><p class="keywords">indigenous, awareness, reconciliation</p>
-<button class="bubble question default" onclick="sendQuestion(17)">What should I do if I need an alternate (Alt) version of an Essential Training Curriculum (ETC) course?</button><p class="keywords">essential, etc, curriculum, alt, alternative, version, alternate</p>
-<button class="bubble question default" onclick="sendQuestion(18)">What should I do if I encounter technical difficulties with Saba?</button><p class="keywords">technical, difficulties, problem, problems, ticket, tickets, national desk, national service, national service desk, NSD</p>
-<button class="bubble question hidden" onclick="sendQuestion(19)">What should I do if I encounter technical difficulties while trying to access or complete a Canada School of Public Service (CSPS) course?</button><p class="keywords">School of Public Service, CSPS, school</p>
-<button class="bubble question hidden" onclick="sendQuestion(20)">How do I access my team’s Essential Training Curriculum (ETC) completion data?</button><p class="keywords">essential, etc, curriculum</p>
-<button class="bubble question hidden" onclick="sendQuestion(21)">As a manager, what should I do to ensure that my Saba reports are accurate?</button><p class="keywords">report, reports</p>
+<button class="bubble question default" onclick="findAnswer(1)" id="Q1">How do I get a Saba account?</button><p class="keywords">saba, account, access</p>
+<button class="bubble question default" onclick="findAnswer(2)" id="Q2">How can I access my Saba Account for the first time?</button><p class="keywords">saba, account, access</p>
+<button class="bubble question default" onclick="findAnswer(3)" id="Q3">When I try to reset my Saba password, it doesn’t work.</button><p class="keywords">peoplesoft, reset, password, pass, pwd</p>
+<button class="bubble question default" onclick="findAnswer(4)" id="Q4">How do I reset my Saba password if forgotten?</button><p class="keywords">peoplesoft, reset, password, pass, pwd</p>
+<button class="bubble question default" onclick="findAnswer(5)" id="Q5">How do I update my manager in Saba?</button><p class="keywords">manager, team lead</p>
+<button class="bubble question hidden" onclick="findAnswer(6)" id="Q6">I cannot find my manager in Saba.</button><p class="keywords">manager, team lead</p>
+<button class="bubble question hidden" onclick="findAnswer(7)" id="Q7">I need manager/team lead access in Saba.</button><p class="keywords">manager, team lead</p>
+<button class="bubble question hidden" onclick="findAnswer(8)" id="Q8">How do I add completed learning in Saba if the course was completed on another learning system? (Including Essential Training Curriculum [ETC] courses completed on the Canada School of Public Service Learning Platform [CSPS]).</button><p class="keywords">completed, complete, learning, add, etc</p>
+<button class="bubble question hidden" onclick="findAnswer(9)" id="Q9">How do I add completed learning from Canada School of Public Service (CSPS) to Saba (for example – Essential Training Curriculum- [ETC])?</button><p class="keywords">completed, complete, learning, add, etc</p>
+<button class="bubble question hidden" onclick="findAnswer(10)" id="Q10">An employee has exhausted all attempts at passing a test. How do I add an attempt?</button><p class="keywords">attempts, attempt, exhausted, tries, test</p>
+<button class="bubble question hidden" onclick="findAnswer(11)" id="Q11">I have exhausted all attempts at passing a test. How can I get another attempt?</button><p class="keywords">attempts, attempt, exhausted, tries, test</p>
+<button class="bubble question default" onclick="findAnswer(12)" id="Q12">I already completed an Essential Training Curriculum (ETC) course at a previous department. Do I need to take the course again at ESDC?</button><p class="keywords">essential, etc, curriculum</p>
+<button class="bubble question default" onclick="findAnswer(13)" id="Q13">How can I ensure that the Essential Training Curriculum (ETC) courses I am directed to take through Canada School of Public Service (CSPS) are included in my Saba profile?</button><p class="keywords">essential, etc, curriculum, School of Public Service, CSPS, school</p>
+<button class="bubble question default" onclick="findAnswer(14)" id="Q14">How quickly will my Saba profile be updated with my completion results once I complete an Essential Training Curriculum (ETC) course on the Canada School of Public Service (CSPS) Learning Platform?</button><p class="keywords">essential, etc, curriculum, School of Public Service, CSPS, school</p>
+<button class="bubble question default" onclick="findAnswer(15)" id="Q15">I completed an Essential Training Curriculum (ETC) course in the Canada School of Public Service (CSPS) Learning Platform more than a week ago, yet it is not showing up in my Saba learning history as complete. What do I do?</button><p class="keywords">essential, etc, curriculum, School of Public Service, CSPS, school</p>
+<button class="bubble question hidden" onclick="findAnswer(16)" id="Q16">How do I make sure my Indigenous Awareness and Reconciliation learning is accurately captured in my Saba learning history?</button><p class="keywords">indigenous, awareness, reconciliation</p>
+<button class="bubble question default" onclick="findAnswer(17)" id="Q17">What should I do if I need an alternate (Alt) version of an Essential Training Curriculum (ETC) course?</button><p class="keywords">essential, etc, curriculum, alt, alternative, version, alternate</p>
+<button class="bubble question default" onclick="findAnswer(18)" id="Q18">What should I do if I encounter technical difficulties with Saba?</button><p class="keywords">technical, difficulties, problem, problems, ticket, tickets, national desk, national service, national service desk, NSD</p>
+<button class="bubble question hidden" onclick="findAnswer(19)" id="Q19">What should I do if I encounter technical difficulties while trying to access or complete a Canada School of Public Service (CSPS) course?</button><p class="keywords">School of Public Service, CSPS, school</p>
+<button class="bubble question hidden" onclick="findAnswer(20)" id="Q20">How do I access my team’s Essential Training Curriculum (ETC) completion data?</button><p class="keywords">essential, etc, curriculum</p>
+<button class="bubble question hidden" onclick="findAnswer(21)" id="Q21">As a manager, what should I do to ensure that my Saba reports are accurate?</button><p class="keywords">report, reports</p>
 </div>
 
 	
@@ -124,7 +127,7 @@
 <!-- Example: Question #3: How do I reset my password. Answer#3: You can reset your passsword here. -->
 <div id="answers" class="hidden">
 
-<div class="bubble answer inlineblock">
+<div class="bubble answer inlineblock" id="A1">
 <p>Follow the instructions in the "<a target="_blank" href="https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fiservice.prv%2Feng%2Fcollege%2Fsaba%2Ffirst-time.shtml&amp;data=05%7C01%7Ccaroline.filion%40servicecanada.gc.ca%7C98ed5c43f5664966202d08db2a34b3ef%7C9ed558468a814246acd8b1a01abfc0d1%7C0%7C0%7C638150178339483930%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=IcZl6u1EHJq%2Fj4ptawjH2sLyOH%2B%2F8TkrwSsZdy9153A%3D&amp;reserved=0">Access your account for the first time</a>" job aid. In it, you will find more information based on your specific situation:</p>
 <br>
 <ul>
@@ -136,7 +139,7 @@
 
 </div>
 	
-<div class="bubble answer inlineblock">
+<div class="bubble answer inlineblock" id="A2">
 <p>Follow the instructions in the "<a target="_blank" href="https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fiservice.prv%2Feng%2Fcollege%2Fsaba%2Ffirst-time.shtml&amp;data=05%7C01%7Ccaroline.filion%40servicecanada.gc.ca%7C98ed5c43f5664966202d08db2a34b3ef%7C9ed558468a814246acd8b1a01abfc0d1%7C0%7C0%7C638150178339483930%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=IcZl6u1EHJq%2Fj4ptawjH2sLyOH%2B%2F8TkrwSsZdy9153A%3D&amp;reserved=0">Access your account for the first time</a>" job aid. In it, you will find more information based on your specific situation:</p>
 <br>
 <ul>
@@ -148,7 +151,7 @@
 
 </div>
 
-<div class="bubble answer inlineblock">
+<div class="bubble answer inlineblock" id="A3">
 <ol>
 <li>Follow these instructions to <a target="_blank" href="https://iservice.prv/eng/college/saba/reset-password.shtml">reset your Saba password</a>.</li><br>
 <li>If you do not receive an email within an hour of following the above instructions, open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a> by selecting Saba as the Product/system/application.</li>
@@ -156,7 +159,7 @@
 
 </div>
 
-<div class="bubble answer inlineblock">
+<div class="bubble answer inlineblock" id="A4">
 <ol>
 <li>Follow these instructions to <a target="_blank" href="https://iservice.prv/eng/college/saba/reset-password.shtml">reset your Saba password</a>.</li><br>
 <li>If you do not receive an email within an hour of following the above instructions, open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a> by selecting Saba as the Product/system/application.</li>
@@ -164,40 +167,66 @@
 
 </div>
 	
-<div class="bubble answer inlineblock"><p>To update your manager in Saba, please follow the instructions to <a target="_blank" href="https://iservice.prv/eng/college/saba/learners.shtml">change your manager in Saba</a>.</p><br>
-<p>Please note that the <strong>spelling </strong>of your manager's name may affect your search (for example, E or &Eacute;).</p></div><div class="bubble answer inlineblock"><p>If your manager does not appear in your search, or if you are a manager and require manager access in Saba, please open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>.</p><br>
-<p>Please note that the <strong>spelling </strong>of your manager's name may affect your search (for example, E or &Eacute;).</p></div><div class="bubble answer inlineblock"><p>If your manager does not appear in your search, or if you are a manager and require manager access in Saba, please open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>.</p><br>
-<p>Please note that the <strong>spelling </strong>of your manager's name may affect your search (for example, E or &Eacute;).</p></div><div class="bubble answer inlineblock"><p>To add training completed outside of Saba to your Saba learning history, please follow the instructions to <a target="_blank" href="https://iservice.prv/eng/college/saba/add-completed-course.shtml">add a completed course</a>.</p><br>
+<div class="bubble answer inlineblock" id="A5"><p>To update your manager in Saba, please follow the instructions to <a target="_blank" href="https://iservice.prv/eng/college/saba/learners.shtml">change your manager in Saba</a>.</p><br>
+<p>Please note that the <strong>spelling </strong>of your manager's name may affect your search (for example, E or &Eacute;).</p></div>
+
+
+<div class="bubble answer inlineblock" id="A6"><p>If your manager does not appear in your search, or if you are a manager and require manager access in Saba, please open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>.</p><br>
+<p>Please note that the <strong>spelling </strong>of your manager's name may affect your search (for example, E or &Eacute;).</p></div>
+
+<div class="bubble answer inlineblock" id="A7"><p>If your manager does not appear in your search, or if you are a manager and require manager access in Saba, please open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>.</p><br>
+<p>Please note that the <strong>spelling </strong>of your manager's name may affect your search (for example, E or &Eacute;).</p></div>
+
+<div class="bubble answer inlineblock" id="A8"><p>To add training completed outside of Saba to your Saba learning history, please follow the instructions to <a target="_blank" href="https://iservice.prv/eng/college/saba/add-completed-course.shtml">add a completed course</a>.</p><br>
 <p>If you are referring to the Essential Training Curriculum (ETC) courses completed on the CSPS Learning Platform, please note that the data import is updated <strong>on a daily basis. </strong>If you completed a course in the past 24 hours, please wait until the next business day for the updates to be reflected in your Saba profile.</p><br>
 <p>To ensure that your courses are transferred correctly, verify that the email address used in your <a target="_blank" href="https://csps-efpc.gc.ca/">Canada School of Public Service</a> profile matches the one used in your Saba profile.</p><br>
 <p>If you need help updating/creating your CSPS account, please contact CSPS&rsquo; <a target="_blank" href="https://www.csps-efpc.gc.ca/contact_us/inquiries-eng.aspx">Client Contact Centre</a>.</p><br>
-<p><strong>Please note:</strong> Only courses that are mandatory within our Department will be automatically transferred to Saba.</p></div><div class="bubble answer inlineblock"><p>To add training completed outside of Saba to your Saba learning history, please follow the instructions to <a target="_blank" href="https://iservice.prv/eng/college/saba/add-completed-course.shtml">add a completed course</a>.</p><br>
+<p><strong>Please note:</strong> Only courses that are mandatory within our Department will be automatically transferred to Saba.</p></div>
+
+
+<div class="bubble answer inlineblock"  id="A9"><p>To add training completed outside of Saba to your Saba learning history, please follow the instructions to <a target="_blank" href="https://iservice.prv/eng/college/saba/add-completed-course.shtml">add a completed course</a>.</p><br>
 <p>If you are referring to the Essential Training Curriculum (ETC) courses completed on the CSPS Learning Platform, please note that the data import is updated <strong>on a daily basis. </strong>If you completed a course in the past 24 hours, please wait until the next business day for the updates to be reflected in your Saba profile.</p><br>
 <p>To ensure that your courses are transferred correctly, verify that the email address used in your <a target="_blank" href="https://csps-efpc.gc.ca/">Canada School of Public Service</a> profile matches the one used in your Saba profile.</p><br>
 <p>If you need help updating/creating your CSPS account, please contact CSPS&rsquo; <a target="_blank" href="https://www.csps-efpc.gc.ca/contact_us/inquiries-eng.aspx">Client Contact Centre</a>.</p><br>
-<p><strong>Please note:</strong> Only courses that are mandatory within our Department will be automatically transferred to Saba.</p></div><div class="bubble answer inlineblock"><ol>
+<p><strong>Please note:</strong> Only courses that are mandatory within our Department will be automatically transferred to Saba.</p></div>
+
+
+<div class="bubble answer inlineblock" id="A10"><ol>
 <li>In order to have an extra attempt, a team lead or manager must open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a> for their employee. They will need to provide the team member's name as well as the name and course ID of the course in question.<br /><br /></li><br>
 <li>Following this request, the Learning Infrastructure team will add one additional attempt.</li><br>
 </ol>
-<p><strong>Please note:</strong> Written approval from the team lead or manager via email is required to make this request. This email will need to be added as an attachment when opening the ticket with NSD.</p></div><div class="bubble answer inlineblock"><ol>
+<p><strong>Please note:</strong> Written approval from the team lead or manager via email is required to make this request. This email will need to be added as an attachment when opening the ticket with NSD.</p></div>
+
+<div class="bubble answer inlineblock" id="A11"><ol>
 <li>In order to have an extra attempt, a team lead or manager must open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a> for their employee. They will need to provide the team member's name as well as the name and course ID of the course in question.<br /><br /></li><br>
 <li>Following this request, the Learning Infrastructure team will add one additional attempt.</li><br>
 </ol>
-<p><strong>Please note:</strong> Written approval from the team lead or manager via email is required to make this request. This email will need to be added as an attachment when opening the ticket with NSD.</p></div><div class="bubble answer inlineblock"><p>Depending on the course, you may be automatically granted equivalency in Saba. Before opening a ticket, please wait one to two weeks before viewing your Saba profile again to confirm whether your completed courses were updated in Saba.</p><br>
+<p><strong>Please note:</strong> Written approval from the team lead or manager via email is required to make this request. This email will need to be added as an attachment when opening the ticket with NSD.</p></div>
+
+<div class="bubble answer inlineblock" id="A12"><p>Depending on the course, you may be automatically granted equivalency in Saba. Before opening a ticket, please wait one to two weeks before viewing your Saba profile again to confirm whether your completed courses were updated in Saba.</p><br>
 <p>If your completed courses are still missing after this waiting period, please contact the&nbsp;<a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>&nbsp;to credit an ETC course completed in another department.</p><br>
 <p>In your ticket, please include the following information:</p><br>
 <ol>
 <li>The name of the course;</li><br>
 <li>The date the course was completed; and</li><br>
 <li>Your proof/certificate of completion (located in your&nbsp;<a target="_blank" href="https://www.csps-efpc.gc.ca/platform/about-eng.aspx">CSPS learning profile</a>).</li>
-</ol></div><div class="bubble answer inlineblock"><p>In order for your CSPS learning to be properly captured in your Saba profile, make sure that your current ESDC/Service Canada email address is listed in your CSPS Learning Platform profile by doing the following:</p><br>
+</ol></div>
+
+
+<div class="bubble answer inlineblock" id="A13"><p>In order for your CSPS learning to be properly captured in your Saba profile, make sure that your current ESDC/Service Canada email address is listed in your CSPS Learning Platform profile by doing the following:</p><br>
 <ol>
 <li>Log in to your <a target="_blank" href="https://www.csps-efpc.gc.ca/platform/about-eng.aspx">CSPS profile</a>;</li><br>
 <li>Select&nbsp;<strong>Settings</strong>;</li><br>
 <li>Select&nbsp;<strong>Account information</strong>&nbsp;and confirm that your departmental email address is listed; and</li><br>
 <li>Review the&nbsp;<strong>Current organization&nbsp;</strong>section and confirm your organization is listed as ESDC. You can update your classification and your employment status if needed as well.</li><br>
 </ol>
-<p>If you need help with your CSPS Learning Platform account, please contact CSPS'&nbsp;<a target="_blank" href="https://www.csps-efpc.gc.ca/contact_us/inquiries-eng.aspx">Client Contact Centre</a>.</p></div><div class="bubble answer inlineblock"><p>ETC course completion information is transferred from CSPS to Saba on a daily basis. If you complete a CSPS course, your Saba profile should be updated within two business days.</p></div><div class="bubble answer inlineblock"><p>Here is what you need to do if you completed a course in the CSPS learning platform, yet it does not show as complete in your Saba learning history.</p><br>
+<p>If you need help with your CSPS Learning Platform account, please contact CSPS'&nbsp;<a target="_blank" href="https://www.csps-efpc.gc.ca/contact_us/inquiries-eng.aspx">Client Contact Centre</a>.</p></div>
+
+
+<div class="bubble answer inlineblock" id="A14"><p>ETC course completion information is transferred from CSPS to Saba on a daily basis. If you complete a CSPS course, your Saba profile should be updated within two business days.</p></div>
+
+
+<div class="bubble answer inlineblock" id="A15"><p>Here is what you need to do if you completed a course in the CSPS learning platform, yet it does not show as complete in your Saba learning history.</p><br>
 <p>Follow these steps:</p><br>
 <ol>
 <li>Log in to your <a target="_blank" href="https://www.csps-efpc.gc.ca/platform/about-eng.aspx">CSPS</a>;</li><br>
@@ -207,15 +236,15 @@
 </ol>
 <p>If your CSPS learner profile was not up to date at the time you completed the course, or if you completed the course more than two weeks ago, please open a ticket with the&nbsp;<a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>. Explain the situation and provide proof of completion (such as a screenshot of your certificate of completion from CSPS) so your Saba account can be updated.</p></div>
 	
-<div class="bubble answer inlineblock"><p>To ensure that your Indigenous Awareness and Reconciliation learning is properly recorded in Saba, visit the Indigenous Awareness and Reconciliation learning iService page and use the following instructions to&nbsp;<a target="_blank" href="https://iservice.prv/eng/college/indigenous_awareness.shtml#getting-credit-your-learning">get credit for your learning</a><span>.</span></p></div>
+<div class="bubble answer inlineblock" id="A16"><p>To ensure that your Indigenous Awareness and Reconciliation learning is properly recorded in Saba, visit the Indigenous Awareness and Reconciliation learning iService page and use the following instructions to&nbsp;<a target="_blank" href="https://iservice.prv/eng/college/indigenous_awareness.shtml#getting-credit-your-learning">get credit for your learning</a><span>.</span></p></div>
 	
-<div class="bubble answer inlineblock"><p>The Alt version of an ESDC course is located directly in the attachment section of the course in Saba. To request an Alt version of a CSPS course, learners need to contact their regional&nbsp;<a target="_blank" href="https://iservice.prv/eng/college/contact_us/index.shtml">Learning Service Delivery team</a>.</p></div>
+<div class="bubble answer inlineblock" id="A17"><p>The Alt version of an ESDC course is located directly in the attachment section of the course in Saba. To request an Alt version of a CSPS course, learners need to contact their regional&nbsp;<a target="_blank" href="https://iservice.prv/eng/college/contact_us/index.shtml">Learning Service Delivery team</a>.</p></div>
 	
-<div class="bubble answer inlineblock"><p>If you have difficulties accessing Saba and/or launching a course, contact the&nbsp;<a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>.</p></div>
+<div class="bubble answer inlineblock" id="A18"><p>If you have difficulties accessing Saba and/or launching a course, contact the&nbsp;<a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>.</p></div>
 	
-<div class="bubble answer inlineblock"><p>If you have difficulties accessing CSPS and/or launching a course, contact the&nbsp;<a target="_blank" href="https://www.csps-efpc.gc.ca/contact_us/inquiries-eng.aspx">CSPS Client Contact Centre</a>.</p></div>
+<div class="bubble answer inlineblock" id="A19"><p>If you have difficulties accessing CSPS and/or launching a course, contact the&nbsp;<a target="_blank" href="https://www.csps-efpc.gc.ca/contact_us/inquiries-eng.aspx">CSPS Client Contact Centre</a>.</p></div>
 	
-<div class="bubble answer inlineblock">
+<div class="bubble answer inlineblock" id="A20">
 
 <p>The deadline to complete the ETC is March 31<sup>st</sup>, for most employees.</p>
 <p>&nbsp;</p>
@@ -242,12 +271,18 @@
 </div>
 	
 	
-<div class="bubble answer inlineblock"><p>To ensure that your Saba reports are accurate, review the organizational structure of your employees in PeopleSoft.</p><br>
+<div class="bubble answer inlineblock" id="A21"><p>To ensure that your Saba reports are accurate, review the organizational structure of your employees in PeopleSoft.</p><br>
 <p>If your organizational structure is not up to date, open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a> to have it updated.</p><br>
-<p><strong>Please note:</strong> If your data is not up to date, a 100% completion rate will not be achievable.</p></div>
-
-
+<p><strong>Please note:</strong> If your data is not up to date, a 100% completion rate will not be achievable.</p>
 </div>
+
+
+
+
+</div><!-- end of answers div. -->
+
+
+
 <div class="hidden">
 <p class="bubble answer built-in-answers">Let me search in my database to see if I can find some useful information. One moment please.</p>
 <p class="bubble answer built-in-answers"></p>
