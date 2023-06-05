@@ -9,11 +9,20 @@
 	
 	<!-- <link rel="stylesheet" href="style.css"> -->
 	<!--  <script src="script.js"></script>  -->
-
-
-	<link rel="stylesheet" href="https://eia-lit.github.io/Assistant/style.css">
-	<script src="https://eia-lit.github.io/Assistant/script.js"></script>
 	
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MXTC589');</script>
+<!-- End Google Tag Manager -->
 
 
 <!-- Google tag (gtag.js) -->
@@ -29,6 +38,11 @@
 	
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXTC589"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 
 <!-- Start of Virtual Assistant. -->
 	<div id="outerVirtualAssistantDiv">
@@ -86,11 +100,10 @@
 						<h3 class="headerBanner left">Suggested Questions</h3>
 
 					</div>
-						<button id="closeChatButton" class="closeButton" onclick="closeChatBox()">Close Window</button>
 				</div>
 <div class="rightOptions">
 <div id="questions">
-<button class="bubble question default" onclick="findAnswer(1)" id="Q1">How do I get a Saba account?</button><p class="keywords">saba, account, access</p>
+<button class="bubble question default employee" onclick="findAnswer(1)" id="Q1">How do I get a Saba account?</button><p class="keywords">saba, account, access</p>
 <button class="bubble question default" onclick="findAnswer(2)" id="Q2">How can I access my Saba Account for the first time?</button><p class="keywords">saba, account, access</p>
 <button class="bubble question default" onclick="findAnswer(3)" id="Q3">When I try to reset my Saba password, it doesn’t work.</button><p class="keywords">peoplesoft, reset, password, pass, pwd</p>
 <button class="bubble question default" onclick="findAnswer(4)" id="Q4">How do I reset my Saba password if forgotten?</button><p class="keywords">peoplesoft, reset, password, pass, pwd</p>
@@ -115,12 +128,13 @@
 
 	
 
-<!-- Built in Questions, do not touch! -->
+<!-- Built in Questions Buttons, do not touch! -->
 <div id="built-in-questions">
-<button class="bubble question hidden" onclick="listInitialQuestions()">List initial options.</button>
-<button class="bubble question" onclick="listAllQuestions()">List all questions.</button>
+<button id="initialQuestions" class="bubble question hidden" onclick="listInitialQuestions()">List initial options.</button>
+<button id="allQuestions" class="bubble question" onclick="listAllQuestions()">List all questions.</button>
+
 <br><!-- need this break to space the bottom scrollbar -->
-</div>
+</div><!-- End of Built in Questions Buttons -->
 
 <!-- Put your answers here, and make sure to include the same classes as the other answers (bubble and answer). -->
 <!-- Please make sure that you have the exact number of answers as the number of questions. ANSWERS MUST BE in the same ORDER corresponding to the question above. -->
@@ -283,10 +297,8 @@
 
 
 
-<div class="hidden">
-<p class="bubble answer built-in-answers">Let me search in my database to see if I can find some useful information. One moment please.</p>
-<p class="bubble answer built-in-answers"></p>
-</div>
+
+
 </div><!-- end of rightOptions. -->
 </div><!-- end of rightDiv. -->
 </div><!-- end of outerRightDiv. -->
