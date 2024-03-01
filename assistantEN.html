@@ -1,324 +1,447 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-	
-	<title>SABA Virtual Assistant</title>
-	<!-- <link rel="stylesheet" href="https://eia-lit.github.io/Assistant/style.css"> -->
-	<!--  <script src="https://eia-lit.github.io/Assistant/script.js"></script>  -->
-	
-	
-	<!-- <link rel="stylesheet" href="style.css"> -->
-	<!--  <script src="script.js"></script>  -->
-	
-	<link rel="stylesheet" href="style.css">
-	<script src="script.js"></script>
-	
-
-
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MXTC589');</script>
-<!-- End Google Tag Manager -->
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3L70XRP72Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3L70XRP72Z');
-</script>
-	
-	
+<title>Email</title>
 </head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXTC589"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
-<!-- Start of Virtual Assistant. -->
-	<div id="outerVirtualAssistantDiv">
-	<div id="virtualAssistantDiv">
-		<div id="outerLeftDiv">
-		<div id="leftDiv">
-			<div class="headerDiv">
-				<div class="header">
-				<h1 class="headerBanner left">Virtual Assistant</h1>
-				</div>
-				<!-- Language Switch here. -->
-				<div id="language"><a class="light" href="https://eia-lit.github.io/Assistant/assistantFR" lang="fr">Français</a></div>
-				
-				
-			</div>
-			
-			<div id="conversationDiv" aria-live="polite">
-				<table id="QNA">
-					<!-- COVERSATION WILL BE HERE -->
-				</table>
-			
-		
-			<div id="typingBubble">
-				<table>
-					<tr><td class="left">
-					<!-- typing animation -->
-				<div id="typing" class="bubble assistant inlineblock center">
-					<table class="center">
-						<tr>
-							<td class="animate1">.</td>
-							<td class="animate2">.</td>
-							<td class="animate3">.</td>
-						</tr>
-					</table>
-				</div>
-				</td></tr>
-				</table>
-			</div> <!-- ebd if typing bubble -->
-			</div> <!-- end of conversationDiv -->
-		<div class="messageBar">
-			<div class="messageForm">
-				<input id="textbox" placeholder="Type your question or your keywords" name="msg" autocomplete="off" type="text">
-				<button id="send" onclick="sendMessage()">Send</button>
-			</div>
-		</div>
-		
-		
-		</div> <!-- end of leftDiv. -->
-		</div> <!-- end of outerLeftDiv. -->
-		
-		<div id="outerRightDiv">
-			<div id="rightDiv">
-				<div class="headerDiv">
-					<div class="header">
-						<h3 class="headerBanner left">Suggested Questions</h3>
-
-					</div>
-				</div>
-<div class="rightOptions">
-<div id="questions">
-<button class="bubble question default employee" onclick="findAnswer(1)" id="Q1">How do I get a Saba account?</button><p class="keywords">saba, account, access</p>
-<button class="bubble question default" onclick="findAnswer(2)" id="Q2">How can I access my Saba Account for the first time?</button><p class="keywords">saba, account, access</p>
-<button class="bubble question default" onclick="findAnswer(3)" id="Q3">When I try to reset my Saba password, it doesn’t work.</button><p class="keywords">peoplesoft, reset, password, pass, pwd</p>
-<button class="bubble question default" onclick="findAnswer(4)" id="Q4">How do I reset my Saba password if forgotten?</button><p class="keywords">peoplesoft, reset, password, pass, pwd</p>
-<button class="bubble question default" onclick="findAnswer(5)" id="Q5">How do I update my manager in Saba?</button><p class="keywords">manager, team lead</p>
-<button class="bubble question hidden" onclick="findAnswer(6)" id="Q6">I cannot find my manager in Saba.</button><p class="keywords">manager, team lead</p>
-<button class="bubble question hidden" onclick="findAnswer(7)" id="Q7">I need manager/team lead access in Saba.</button><p class="keywords">manager, team lead</p>
-<button class="bubble question hidden" onclick="findAnswer(8)" id="Q8">How do I add completed learning in Saba if the course was completed on another learning system? (Including Essential Training Curriculum [ETC] courses completed on the Canada School of Public Service Learning Platform [CSPS]).</button><p class="keywords">completed, complete, learning, add, etc</p>
-<button class="bubble question hidden" onclick="findAnswer(9)" id="Q9">How do I add completed learning from Canada School of Public Service (CSPS) to Saba (for example – Essential Training Curriculum- [ETC])?</button><p class="keywords">completed, complete, learning, add, etc</p>
-<button class="bubble question hidden" onclick="findAnswer(10)" id="Q10">An employee has exhausted all attempts at passing a test. How do I add an attempt?</button><p class="keywords">attempts, attempt, exhausted, tries, test</p>
-<button class="bubble question hidden" onclick="findAnswer(11)" id="Q11">I have exhausted all attempts at passing a test. How can I get another attempt?</button><p class="keywords">attempts, attempt, exhausted, tries, test</p>
-<button class="bubble question default" onclick="findAnswer(12)" id="Q12">I already completed an Essential Training Curriculum (ETC) course at a previous department. Do I need to take the course again at ESDC?</button><p class="keywords">essential, etc, curriculum</p>
-<button class="bubble question default" onclick="findAnswer(13)" id="Q13">How can I ensure that the Essential Training Curriculum (ETC) courses I am directed to take through Canada School of Public Service (CSPS) are included in my Saba profile?</button><p class="keywords">essential, etc, curriculum, School of Public Service, CSPS, school</p>
-<button class="bubble question default" onclick="findAnswer(14)" id="Q14">How quickly will my Saba profile be updated with my completion results once I complete an Essential Training Curriculum (ETC) course on the Canada School of Public Service (CSPS) Learning Platform?</button><p class="keywords">essential, etc, curriculum, School of Public Service, CSPS, school</p>
-<button class="bubble question default" onclick="findAnswer(15)" id="Q15">I completed an Essential Training Curriculum (ETC) course in the Canada School of Public Service (CSPS) Learning Platform more than a week ago, yet it is not showing up in my Saba learning history as complete. What do I do?</button><p class="keywords">essential, etc, curriculum, School of Public Service, CSPS, school</p>
-<button class="bubble question hidden" onclick="findAnswer(16)" id="Q16">How do I make sure my Indigenous Awareness and Reconciliation learning is accurately captured in my Saba learning history?</button><p class="keywords">indigenous, awareness, reconciliation</p>
-<button class="bubble question default" onclick="findAnswer(17)" id="Q17">What should I do if I need an alternate (Alt) version of an Essential Training Curriculum (ETC) course?</button><p class="keywords">essential, etc, curriculum, alt, alternative, version, alternate</p>
-<button class="bubble question default" onclick="findAnswer(18)" id="Q18">What should I do if I encounter technical difficulties with Saba?</button><p class="keywords">technical, difficulties, problem, problems, ticket, tickets, national desk, national service, national service desk, NSD</p>
-<button class="bubble question hidden" onclick="findAnswer(19)" id="Q19">What should I do if I encounter technical difficulties while trying to access or complete a Canada School of Public Service (CSPS) course?</button><p class="keywords">School of Public Service, CSPS, school</p>
-<button class="bubble question hidden" onclick="findAnswer(20)" id="Q20">How do I access my team’s Essential Training Curriculum (ETC) completion data?</button><p class="keywords">essential, etc, curriculum</p>
-<button class="bubble question hidden" onclick="findAnswer(21)" id="Q21">As a manager, what should I do to ensure that my Saba reports are accurate?</button><p class="keywords">report, reports</p>
-</div>
-
-	
-
-<!-- Built in Questions Buttons, do not touch! -->
-<div id="built-in-questions">
-<button id="initialQuestions" class="bubble question hidden" onclick="listInitialQuestions()">List initial options.</button>
-<button id="allQuestions" class="bubble question" onclick="listAllQuestions()">List all questions.</button>
-
-<br><!-- need this break to space the bottom scrollbar -->
-</div><!-- End of Built in Questions Buttons -->
-
-<!-- Put your answers here, and make sure to include the same classes as the other answers (bubble and answer). -->
-<!-- Please make sure that you have the exact number of answers as the number of questions. ANSWERS MUST BE in the same ORDER corresponding to the question above. -->
-<!-- Example: Question #3: How do I reset my password. Answer#3: You can reset your passsword here. -->
-<div id="answers" class="hidden">
-
-<div class="bubble answer inlineblock" id="A1">
-<p>Follow the instructions in the "<a target="_blank" href="https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fiservice.prv%2Feng%2Fcollege%2Fsaba%2Ffirst-time.shtml&amp;data=05%7C01%7Ccaroline.filion%40servicecanada.gc.ca%7C98ed5c43f5664966202d08db2a34b3ef%7C9ed558468a814246acd8b1a01abfc0d1%7C0%7C0%7C638150178339483930%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=IcZl6u1EHJq%2Fj4ptawjH2sLyOH%2B%2F8TkrwSsZdy9153A%3D&amp;reserved=0">Access your account for the first time</a>" job aid. In it, you will find more information based on your specific situation:</p>
-<br>
-<ul>
-<li>I have an active PeopleSoft profile OR I am unsure whether my PeopleSoft account is active</li><br>
-<li>I do not have an active profile in PeopleSoft or my password reset did not prompt an email</li><br>
-<li>I am a Saba manager with a group of new employees who need access to Saba</li><br>
-<li>I am an employee with an active profile in PeopleSoft and will log in to Saba for the first time</li>
-</ul>
-
-</div>
-	
-<div class="bubble answer inlineblock" id="A2">
-<p>Follow the instructions in the "<a target="_blank" href="https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fiservice.prv%2Feng%2Fcollege%2Fsaba%2Ffirst-time.shtml&amp;data=05%7C01%7Ccaroline.filion%40servicecanada.gc.ca%7C98ed5c43f5664966202d08db2a34b3ef%7C9ed558468a814246acd8b1a01abfc0d1%7C0%7C0%7C638150178339483930%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=IcZl6u1EHJq%2Fj4ptawjH2sLyOH%2B%2F8TkrwSsZdy9153A%3D&amp;reserved=0">Access your account for the first time</a>" job aid. In it, you will find more information based on your specific situation:</p>
-<br>
-<ul>
-<li>I have an active PeopleSoft profile OR I am unsure whether my PeopleSoft account is active</li><br>
-<li>I do not have an active profile in PeopleSoft or my password reset did not prompt an email</li><br>
-<li>I am a Saba manager with a group of new employees who need access to Saba</li><br>
-<li>I am an employee with an active profile in PeopleSoft and will log in to Saba for the first time</li>
-</ul>
-
-</div>
-
-<div class="bubble answer inlineblock" id="A3">
-<ol>
-<li>Follow these instructions to <a target="_blank" href="https://iservice.prv/eng/college/saba/reset-password.shtml">reset your Saba password</a>.</li><br>
-<li>If you do not receive an email within an hour of following the above instructions, open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a> by selecting Saba as the Product/system/application.</li>
-</ol>
-
-</div>
-
-<div class="bubble answer inlineblock" id="A4">
-<ol>
-<li>Follow these instructions to <a target="_blank" href="https://iservice.prv/eng/college/saba/reset-password.shtml">reset your Saba password</a>.</li><br>
-<li>If you do not receive an email within an hour of following the above instructions, open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a> by selecting Saba as the Product/system/application.</li>
-</ol>
-
-</div>
-	
-<div class="bubble answer inlineblock" id="A5"><p>To update your manager in Saba, please follow the instructions to <a target="_blank" href="https://iservice.prv/eng/college/saba/learners.shtml">change your manager in Saba</a>.</p><br>
-<p>Please note that the <strong>spelling </strong>of your manager's name may affect your search (for example, E or &Eacute;).</p></div>
-
-
-<div class="bubble answer inlineblock" id="A6"><p>If your manager does not appear in your search, or if you are a manager and require manager access in Saba, please open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>.</p><br>
-<p>Please note that the <strong>spelling </strong>of your manager's name may affect your search (for example, E or &Eacute;).</p></div>
-
-<div class="bubble answer inlineblock" id="A7"><p>If your manager does not appear in your search, or if you are a manager and require manager access in Saba, please open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>.</p><br>
-<p>Please note that the <strong>spelling </strong>of your manager's name may affect your search (for example, E or &Eacute;).</p></div>
-
-<div class="bubble answer inlineblock" id="A8"><p>To add training completed outside of Saba to your Saba learning history, please follow the instructions to <a target="_blank" href="https://iservice.prv/eng/college/saba/add-completed-course.shtml">add a completed course</a>.</p><br>
-<p>If you are referring to the Essential Training Curriculum (ETC) courses completed on the CSPS Learning Platform, please note that the data import is updated <strong>on a daily basis. </strong>If you completed a course in the past 24 hours, please wait until the next business day for the updates to be reflected in your Saba profile.</p><br>
-<p>To ensure that your courses are transferred correctly, verify that the email address used in your <a target="_blank" href="https://csps-efpc.gc.ca/">Canada School of Public Service</a> profile matches the one used in your Saba profile.</p><br>
-<p>If you need help updating/creating your CSPS account, please contact CSPS&rsquo; <a target="_blank" href="https://www.csps-efpc.gc.ca/contact_us/inquiries-eng.aspx">Client Contact Centre</a>.</p><br>
-<p><strong>Please note:</strong> Only courses that are mandatory within our Department will be automatically transferred to Saba.</p></div>
-
-
-<div class="bubble answer inlineblock"  id="A9"><p>To add training completed outside of Saba to your Saba learning history, please follow the instructions to <a target="_blank" href="https://iservice.prv/eng/college/saba/add-completed-course.shtml">add a completed course</a>.</p><br>
-<p>If you are referring to the Essential Training Curriculum (ETC) courses completed on the CSPS Learning Platform, please note that the data import is updated <strong>on a daily basis. </strong>If you completed a course in the past 24 hours, please wait until the next business day for the updates to be reflected in your Saba profile.</p><br>
-<p>To ensure that your courses are transferred correctly, verify that the email address used in your <a target="_blank" href="https://csps-efpc.gc.ca/">Canada School of Public Service</a> profile matches the one used in your Saba profile.</p><br>
-<p>If you need help updating/creating your CSPS account, please contact CSPS&rsquo; <a target="_blank" href="https://www.csps-efpc.gc.ca/contact_us/inquiries-eng.aspx">Client Contact Centre</a>.</p><br>
-<p><strong>Please note:</strong> Only courses that are mandatory within our Department will be automatically transferred to Saba.</p></div>
-
-
-<div class="bubble answer inlineblock" id="A10"><ol>
-<li>In order to have an extra attempt, a team lead or manager must open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a> for their employee. They will need to provide the team member's name as well as the name and course ID of the course in question.<br /><br /></li><br>
-<li>Following this request, the Learning Infrastructure team will add one additional attempt.</li><br>
-</ol>
-<p><strong>Please note:</strong> Written approval from the team lead or manager via email is required to make this request. This email will need to be added as an attachment when opening the ticket with NSD.</p></div>
-
-<div class="bubble answer inlineblock" id="A11"><ol>
-<li>In order to have an extra attempt, a team lead or manager must open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a> for their employee. They will need to provide the team member's name as well as the name and course ID of the course in question.<br /><br /></li><br>
-<li>Following this request, the Learning Infrastructure team will add one additional attempt.</li><br>
-</ol>
-<p><strong>Please note:</strong> Written approval from the team lead or manager via email is required to make this request. This email will need to be added as an attachment when opening the ticket with NSD.</p></div>
-
-<div class="bubble answer inlineblock" id="A12"><p>Depending on the course, you may be automatically granted equivalency in Saba. Before opening a ticket, please wait one to two weeks before viewing your Saba profile again to confirm whether your completed courses were updated in Saba.</p><br>
-<p>If your completed courses are still missing after this waiting period, please contact the&nbsp;<a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>&nbsp;to credit an ETC course completed in another department.</p><br>
-<p>In your ticket, please include the following information:</p><br>
-<ol>
-<li>The name of the course;</li><br>
-<li>The date the course was completed; and</li><br>
-<li>Your proof/certificate of completion (located in your&nbsp;<a target="_blank" href="https://www.csps-efpc.gc.ca/platform/about-eng.aspx">CSPS learning profile</a>).</li>
-</ol></div>
-
-
-<div class="bubble answer inlineblock" id="A13"><p>In order for your CSPS learning to be properly captured in your Saba profile, make sure that your current ESDC/Service Canada email address is listed in your CSPS Learning Platform profile by doing the following:</p><br>
-<ol>
-<li>Log in to your <a target="_blank" href="https://www.csps-efpc.gc.ca/platform/about-eng.aspx">CSPS profile</a>;</li><br>
-<li>Select&nbsp;<strong>Settings</strong>;</li><br>
-<li>Select&nbsp;<strong>Account information</strong>&nbsp;and confirm that your departmental email address is listed; and</li><br>
-<li>Review the&nbsp;<strong>Current organization&nbsp;</strong>section and confirm your organization is listed as ESDC. You can update your classification and your employment status if needed as well.</li><br>
-</ol>
-<p>If you need help with your CSPS Learning Platform account, please contact CSPS'&nbsp;<a target="_blank" href="https://www.csps-efpc.gc.ca/contact_us/inquiries-eng.aspx">Client Contact Centre</a>.</p></div>
-
-
-<div class="bubble answer inlineblock" id="A14"><p>ETC course completion information is transferred from CSPS to Saba on a daily basis. If you complete a CSPS course, your Saba profile should be updated within two business days.</p></div>
-
-
-<div class="bubble answer inlineblock" id="A15"><p>Here is what you need to do if you completed a course in the CSPS learning platform, yet it does not show as complete in your Saba learning history.</p><br>
-<p>Follow these steps:</p><br>
-<ol>
-<li>Log in to your <a target="_blank" href="https://www.csps-efpc.gc.ca/platform/about-eng.aspx">CSPS</a>;</li><br>
-<li>Select&nbsp;<strong>Settings</strong>;</li><br>
-<li>Select&nbsp;<strong>Account information</strong>&nbsp;and confirm that your departmental email address is listed; and</li><br>
-<li>Review the&nbsp;<strong>Current organization&nbsp;</strong>section and confirm your organization is listed as ESDC. You can update your classification and your employment status if needed as well.</li><br>
-</ol>
-<p>If your CSPS learner profile was not up to date at the time you completed the course, or if you completed the course more than two weeks ago, please open a ticket with the&nbsp;<a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>. Explain the situation and provide proof of completion (such as a screenshot of your certificate of completion from CSPS) so your Saba account can be updated.</p></div>
-	
-<div class="bubble answer inlineblock" id="A16"><p>To ensure that your Indigenous Awareness and Reconciliation learning is properly recorded in Saba, visit the Indigenous Awareness and Reconciliation learning iService page and use the following instructions to&nbsp;<a target="_blank" href="https://iservice.prv/eng/college/indigenous_awareness.shtml#getting-credit-your-learning">get credit for your learning</a><span>.</span></p></div>
-	
-<div class="bubble answer inlineblock" id="A17"><p>The Alt version of an ESDC course is located directly in the attachment section of the course in Saba. To request an Alt version of a CSPS course, learners need to contact their regional&nbsp;<a target="_blank" href="https://iservice.prv/eng/college/contact_us/index.shtml">Learning Service Delivery team</a>.</p></div>
-	
-<div class="bubble answer inlineblock" id="A18"><p>If you have difficulties accessing Saba and/or launching a course, contact the&nbsp;<a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a>.</p></div>
-	
-<div class="bubble answer inlineblock" id="A19"><p>If you have difficulties accessing CSPS and/or launching a course, contact the&nbsp;<a target="_blank" href="https://www.csps-efpc.gc.ca/contact_us/inquiries-eng.aspx">CSPS Client Contact Centre</a>.</p></div>
-	
-<div class="bubble answer inlineblock" id="A20">
-
-<p>The deadline to complete the ETC is March 31<sup>st</sup>, for most employees.</p>
-<p>&nbsp;</p>
-<p>The completion deadline for employees who joined the department after April 1st is one year from the date they were assigned the curriculum (see Individual Deadlines in Saba).</p>
-<p>&nbsp;</p>
-<p><strong>Please note: </strong>These employees are excluded from their team&rsquo;s ETC completion objectives.</p>
-<p>&nbsp;</p>
-<p>Follow these instructions to view an accurate picture of your team&rsquo;s completion data:</p>
-<ol>
-<li>Select the <strong>Main menu button,</strong> which appears as <strong>three lines </strong>in the top left hand corner of the page.<br /><br /></li>
-<li>Select the <strong>My Team</strong> item to display the &ldquo;Direct Team&rdquo; page. Select the <strong>Expand</strong> <strong>icon</strong>, which appears as <strong>four (4) tiles </strong>in the top left hand corner of the Direct Team page.<br /><br /></li>
-<li>Select <strong>Manager Dashboards</strong>. This opens the Manager Dashboards page. The default report shown is the Summary Report for ESDC&rsquo;s Essential Training Curriculum, and contains four (4) additional reports.<br /><br /></li>
-<li>Select the graphic of your choice, which will bring you to your desired report.<br /><br /></li>
-<li>To export your data in Excel, select the <strong>download button</strong> (Export as a PDF&hellip;) appearing as <strong>a downward arrow</strong>, which is located in the top right hand corner of the page.</li>
-</ol>
-<p>&nbsp;</p>
-<p>For more information:</p>
-<ul>
-<li>Visit the <a target=“_blank” href="https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fiservice.prv%2Feng%2Fcollege%2Fmandatory_training%2Ffaq_mandatory_training_managers.shtml&amp;data=05%7C01%7Ccaroline.filion%40servicecanada.gc.ca%7C98ed5c43f5664966202d08db2a34b3ef%7C9ed558468a814246acd8b1a01abfc0d1%7C0%7C0%7C638150178339327707%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=5BIdx6dOFGsX0mQ9Fp%2BG8o%2FiUUuYOeTvfzFuYZXw78U%3D&amp;reserved=0">ETC for Team Leaders, Supervisors, Managers and Executives FAQ</a> page.</li><br>
-<li>Visit the <a target=“_blank” href="https://can01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fiservice.prv%2Feng%2Fcollege%2Fmandatory_training%2Findex.shtml%3Fsite%3Diservice-prv%23reporting&amp;data=05%7C01%7Ccaroline.filion%40servicecanada.gc.ca%7C98ed5c43f5664966202d08db2a34b3ef%7C9ed558468a814246acd8b1a01abfc0d1%7C0%7C0%7C638150178339327707%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=%2F99nJd5hJR21x0gOWZPA8kmkjcE66iopEe7Om9n5Z5c%3D&amp;reserved=0">Tracking and Reporting</a> section of the ETC iService page for more information on tracking and generating reports.</li>
-</ul>
-	
-
-</div>
-	
-	
-<div class="bubble answer inlineblock" id="A21"><p>To ensure that your Saba reports are accurate, review the organizational structure of your employees in PeopleSoft.</p><br>
-<p>If your organizational structure is not up to date, open a ticket with the <a target="_blank" href="https://iservice.prv/eng/imit/nsd/index.shtml">National Service Desk</a> to have it updated.</p><br>
-<p><strong>Please note:</strong> If your data is not up to date, a 100% completion rate will not be achievable.</p>
-</div>
-
-
-
-
-</div><!-- end of answers div. -->
-
-
-
-
-
-</div><!-- end of rightOptions. -->
-</div><!-- end of rightDiv. -->
-</div><!-- end of outerRightDiv. -->
-
-</div> <!-- end VirtualAssistantDiv -->
-</div> <!-- end outerVirtualAssistantDiv -->
-	
-<script>
-
-init();
-var textbox = document.getElementById("textbox");
-textbox.addEventListener("keyup", function(event) {
-event.preventDefault();
-if (event.keyCode === 13) {
-document.getElementById("send").click();
-}
-});
-
-
-</script>
-
 </body>
-</htlm>
+<div style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 10px;"><a href="https://arial.csps-efpc.gc.ca/vaw.asp?riid=17351&id=6AFEBA27775E6CBF8DE8E3B2C2976940" target="_blank">View This Email As A Webpage</a></div>
+
+<div style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 10px;"><a href="https://arial.csps-efpc.gc.ca/vaw.asp?riid=17351&id=6AFEBA27775E6CBF8DE8E3B2C2976940" target="_blank">Afficher ce courriel en tant que page Web</a>
+
+<hr /></div>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-CA" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head><META http-equiv="Content-Type" content="text/html;charset=windows-1252">
+	<title>Make the Most of GCLearning | Tirez pleinement profit du GCApprentissage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="IE=edge" http-equiv="X-UA-Compatible" /><!-- Prevents numbers from being interpreted as telephone numbers --><meta name="format-detection" content="telephone=no" /><!-- Prevent zooming out to desktop version of email on iOS --><meta name="x-apple-disable-message-reformatting" /><!-- Tweak for images in Outlook --><!--[if gte mso 9]>
+      <xml>
+         <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+         </o:OfficeDocumentSettings>
+      </xml>
+ <![endif]--><!-- Mobile -->
+	<style media="screen" type="text/css">@media only screen and (max-width: 599px) {
+         table {
+         width: 100% !important;
+         }
+         .banner {
+         text-align: center !important;
+         }
+         .banner h1 {
+         margin: 0 !important;
+         }
+         .body-text {
+         padding: 0 !important;
+         }
+         .spacer {
+         display: none !important;
+         }
+         .desktop-banner {
+         display: none !important;
+         }
+         .mobile-banner {
+         visibility: visible !important;
+         display: block !important;
+         height: auto !important;
+         padding: 0 !important;
+         font-size: inherit !important;
+         }
+         .mobile-banner img {
+         width: 380px !important;
+         margin: 0 !important;
+         }
+         .desktop-feature {
+         display: none !important;
+         }
+.mobile-img {
+         width: 320px !important;
+         margin: 0 !important;
+         padding:0;
+         }
+         .mobile-feature {
+         visibility: visible !important;
+         display: block !important;
+         height: auto !important;
+         padding: 22px 0 0 0 !important;
+         font-size: inherit !important;
+         }
+         .mobile-feature img {
+         width: 290px !important;
+         margin: 0 !important;
+         padding:0;
+         background-color:#fff !important;
+         }
+         /* No padding on sides as would conflict with full width */
+         .cta-btn a {
+         width: 100% !important;
+         padding: 16px 0 16px 0 !important;
+         }
+         .btn-padding{padding:0 !important;}
+         .button-text{font-size:24px;}
+         .csps-fip-darkmode img,.csps-fip img {
+         height: 25px !important;
+         width: 250px !important;}
+         .intro-box{padding: 0 20px 0 20px !important;}
+         }
+	</style>
+	<!-- Dark mode -->
+	<style media="screen" type="text/css">@media screen and (prefers-color-scheme: dark) {
+         body {
+         background-color: #121212 !important;
+         }
+         table, td, img {
+         background-color: #1f1f1f !important;
+         }
+.email-gray-background{ background-color: #333 !important;}
+.intro-box img, .intro-box table, .intro-box td{background-color:#333 !important;}
+         a {
+         color: #88bbdd !important;
+         }
+         .banner-background, .banner-background td, .banner-background img, .cta-btn td {
+         background-color: #3f2a56 !important;
+         }
+         .body-text p, .cta-btn a, h1, h2, h3, li {
+         color: #ffffff !important;
+         }
+         .body-text p {
+         opacity: 0.87 !important;
+         }
+         .gc-fip, .csps-fip, .featured-icon-light-mode{
+         display: none !important;
+         }
+         .gc-fip-darkmode, .csps-fip-darkmode{
+         visibility: visible !important;
+         display: block !important;
+         height: auto !important;
+         font-size: inherit !important;
+         }
+.featured-icon-dark-mode{
+visibility: visible !important;
+display: inline-block !important;
+         height: 20px !important;
+         font-size: inherit !important;}
+         .gc-fip-darkmode{padding: 20px !important;}
+         .gc-fip-darkmode img {
+         height: 30px !important;
+         }
+.csps-fip-darkmode img,.csps-fip img, .csps-fip-all img{
+         height: 30px !important;
+         width: 300px !important;
+         }
+         .intro-box, .mobile-feature {background-color:#333 !important;}
+p.subscribed-email, p.subscribe-text{color:#ccc!important;}
+         }
+	</style>
+	<!-- Hover -->
+	<style media="screen" type="text/css">/*.cta-btn td:hover, .cta-btn a:hover {
+         background-color: #9468c4 !important;
+         }*/
+         body{background-color:#fff;}
+         h1{color:#da797a;font-family: Helvetica, Arial, sans-serif;margin-top:20px;}
+         h2{color:#3f2a56; font-family: Helvetica, Arial, sans-serif;margin-top:35px;}
+		 h3{color:#3f2a56; font-family: Helvetica, Arial, sans-serif;}
+         p,li{font-size:20px; font-family: Helvetica, Arial, sans-serif; color:#333;line-height:120%;}
+         /*To make the header links smaller*/
+         p a, li a{font-size:20px; font-family: Helvetica, Arial, sans-serif; color:#336699;}
+         p#subscribe-text,p#subscribe-text a{font-size:16px;line-height:120%;}
+         a{color:#336699;}
+         div a{color:#336699;font-size:16px;}
+         hr{margin-bottom:0;}
+         br{line-height:150%;}
+         li{margin-bottom:8px;}
+         div{padding:5px 0 0 0;}
+         .mobile-banner img {
+         width: 650px;
+         margin: 0 !important;
+         }
+		 #intro-eng p, #intro-fra p, .body-text p{
+			 font-size: 20px;
+			 margin: 20px 0 20px 0;
+		 }
+		 .cta-btn {
+         margin: 20px 0 20px 0;
+         }
+		 .social-media {
+         width: 52px;
+         }
+		.app-icons{height:40px;}
+		p.subscribe-text,p.subscribe-text a{font-size:14px;line-height:120%;}
+		.subscribed-email{color:#555;}
+		.subscribed-email p, .subscribed-email a{font-size:16px;line-height:120%;}
+	</style>
+</head>
+<body bgcolor="#f2f2f2" style="margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif;">
+<table bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse;width:100%">
+	<tbody>
+		<tr>
+			<td class="email-gray-background">
+			<table bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse;width:100%;">
+				<tbody>
+					<tr>
+						<td class="email-gray-background">
+						<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse;" width="650">
+							<tbody>
+								<tr>
+									<td class="csps-fip" style="padding: 25px 30px 25px 30px;"><img alt="Canada School of Public Service - École de la fonction publique du Canada" src="https://arial.csps-efpc.gc.ca/uploads/D24AECE69BABF119B6F52FF59AA34D30/resources/CSPS_FIP_BlackRed_EN_300px_with_white_BG_1416.png" style="width: 300px; height: 30px;" /></td>
+								</tr>
+								<!-- Hide from Outlook. Already hidden in CSS, but prevents from re-appearing in forwarded emails --><!--[if !mso]><!-->
+								<tr>
+									<td class="csps-fip-darkmode" style="font-size: 0; padding: 25px 30px 25px 30px; height: 0; display: none; visibility: hidden;"><img alt="Canada School of Public Service - École de la fonction publique du Canada" height="0" src="https://arial.csps-efpc.gc.ca/uploads/D24AECE69BABF119B6F52FF59AA34D30/resources/CSPS_FipEng_White_e_300px_769.png" style="display: inline; color: #ffffff; background-color: #ffffff;" width="300" /></td>
+								</tr>
+								<!--<![endif]-->
+								<tr>
+									<td bgcolor="#3f2a56" class="banner-background" style="padding: 0; color:#fff;">
+									<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+										<tbody>
+											<tr>
+												<td align="center" class="mobile-banner"><img alt="Make the most of #GCLearning" src="https://arial.csps-efpc.gc.ca/uploads/D24AECE69BABF119B6F52FF59AA34D30/resources/gclearning_en_724.jpg" /></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td bgcolor="#ffffff" style="padding: 20px 30px 20px 30px;">
+									<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+										<tbody>
+											<tr>
+												<td class="body-text" style="padding:20px;">
+												<p lang="fr-CA" style="color: #3f2a56;font-size:14px"><a href="#en-link">(Le fran&ccedil;ais suit l&#39;anglais)</a></p>
+
+												<h1 style="margin-top:30px;">Registration Is Approved</h1>
+												</td>
+											</tr>
+											<tr>
+												<td class="body-text intro-box" id="intro-eng" style="padding:22px 20px 30px 20px; background-color: #f2f2f2; border-bottom: 18px solid #3f2a56;">
+												<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"><!-- Hide from Outlook. Already hidden in CSS, but prevents from re-appearing in forwarded emails --><!--[if !mso]><!-->
+													<tbody>
+														<tr>
+															<td align="center" class="mobile-feature" style="font-size: 0; padding: 0; height: 0; display: none; visibility: hidden;"><img alt="https://arial.csps-efpc.gc.ca/ct.asp?id=E56A07094A26352B31D02E9977FBD1174BB2E6C4575AD0AB5AB2782E0B9F7F581C2513242C30EAEE3D42E928603DFC4F8F7C98E6598F4A125472EE101742E748&ct=4aeUswAAAAA%3d" src="https://arial.csps-efpc.gc.ca/uploads/D24AECE69BABF119B6F52FF59AA34D30/resources/E-Update_MHLearningSeries_Mobile_280x150_1648.png" style="color: #ffffff; background-color: #fff; font-family: Helvetica, Arial, sans-serif; font-size: 16px;" width="0" /></td>
+														</tr>
+														<!--<![endif]-->
+														<tr>
+															<td align="right" class="desktop-feature" style="padding: 0"><img alt="https://arial.csps-efpc.gc.ca/ct.asp?id=E56A07094A26352B31D02E9977FBD1174BB2E6C4575AD0AB5AB2782E0B9F7F581C2513242C30EAEE3D42E928603DFC4F8F7C98E6598F4A125472EE101742E748&ct=4aeUswAAAAA%3d" src="https://arial.csps-efpc.gc.ca/uploads/D24AECE69BABF119B6F52FF59AA34D30/resources/E-Update_MHLearningSeries_Desktop_550x150_1647.png" style="width: 550px; height: 150px;" /></td>
+														</tr>
+													</tbody>
+												</table>
+
+												
+
+												<p>Hello @Reg_StudentName@,<br><br>Please note that you have been registered to @Reg_ClassTitle@ and your seat has been confirmed.<br><br>To drop this class, you may do so through your  Saba profile.<br><br>
+Thank you. <br><br></p>
+
+												<ul>
+													<li><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=5228FC9918FE1CB23AF58C573C9168CA375D95299E0DE8E7E9B559DFC4FE3DFB6FB3FF4A3A762ADD9C482B23A3B30167CDD346A7432E7018255202DB428AEDBE&ct=4aeUsyMAAABCWmgzMUFZJlNZA6OuMwAACpmAAAOAECpPTIAgACKGNR6mmnqFMABNDsAFqg%2bmdwnoYoPy2SwSTSfi7kinChIAdHXGYA%3d%3d">Mental Health Week</a></li>
+													<li><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=B38A768B2AB8799473EB673C503BA7BB7541431CA3A4D8E5B6C7A9E7A35BB3E870EB9A7836B630C977B46F00B841B532C32199978820AE78BFB209DFF3A51FE7&ct=4aeUszIAAABCWmgzMUFZJlNZ79Ln%2fgAADhmAAAOAECvHTMAgAFRTTIxMTEGqaYYBMkqzJWEVT1Tulfh4HeVs93AghclhxJNfJsMfxdyRThQkO%2fS5%2f4A%3d">Mental Health Learning Series</a></li>
+												</ul>
+												</td>
+											</tr>
+											<tr>
+												<td class="body-text" style="padding:10px 20px 20px 20px; background-color:#fff;">
+												<h2>Raising awareness</h2>
+
+												<p><b>Privacy Awareness Week 2023</b><br />
+												Privacy Awareness Week (May 1 to 7, 2023) aims to promote awareness of privacy issues and the importance of the protection of personal information.</p>
+
+												<p><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=906744BB2E2417295CE8C13C9F044252D9B6217533DB92305FE84BBC5FF201E26248B3D918AE0F5D564ACFE158B874727CB0B7CEF0C088BF0464A6F349CDA33A&ct=4aeUs0cAAABCWmgzMUFZJlNZQMBB3gAAFp%2bAAQPSEooAkACvx94AIABQxgAAAACKeoZNqDaCbUD01HPWdR1Kh7zhYryOlfDB4CEF5VKJmzhWJyc8bp6IG8mELxStMIAQZM1vxdyRThQkEDAQd4A%3d">Privacy Awareness Week 2023: What Is Public May Still Be Personal</a><br />
+												<b>May 8, 2023</b> | 1.5 hours | Webcast</p>
+
+												<h2>Upcoming events</h2>
+
+												<p><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=DCF136433A08183143C1AB66A4A6354EB41FA6251A1C5E09BACFFD11658C1ADB51D329F346EEB447F86412EA199FFF839D6701F88E7C390AA61633729901BFC3&ct=4aeUs0cAAABCWmgzMUFZJlNZgBRREwAAFp%2bAAQOhEqIgEACvx94AIABQoAAAAART1D0nlB6J6TIM1CK0mFE54Uz6S7LJvIhABA7TtRqZuQ2VZFAb19EIwRxC61m2BggZO9PxdyRThQkIAUURMA%3d%3d">Overcoming Adversity and Reclaiming Power as Indigenous Women</a><br />
+												This event, taking place on Red Dress Day, features a diverse panel of Indigenous women who are role models and who will share their personal stories, their journeys, and their struggles to overcome intergenerational trauma.<br />
+												<b>May 5, 2023</b> | 1.5 hours | Webcast</p>
+
+												<p><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=1EEDEB8DA4BC9C3A184F0BC45DF79129A71480F7A5F98A367F437DA2D45AC2682C9A5892CE98FE16EC54628F2921974088C9742A6F152A6BC5CC8DDD378DA25A&ct=4aeUs0cAAABCWmgzMUFZJlNZnKaElgAAFp%2bAAQOsEoohAACvx94AIABIinqHlMhmpmo9QPSCKaZMEwARg0Mnoo5xrNJQ4jZUovaAYCEH3dqtj8QvOexGNm8EHnUJA2605dJBQFEa8F3JFOFCQnKaElg%3d">Canadian Jewish Heritage Month 2023: Celebrating the Diversity of Jewish Canadians</a><br />
+												This informative and stereotype-busting event will celebrate Jewish Canadians and Jewish identity through a panel discussion with public servants from different Jewish sub-ethnicities and communities.<br />
+												<b>May 15, 2023</b> | 1.5 hours | Webcast</p>
+
+												<p><b>New date! </b><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=28AC99C1659410431A62F656FFC54D6C9AAEB74BC9FA7C06B55D445ACE6DE8645A3193B292B9CD527E829CF9648E76509071223F8EBE9F3ABB0D1EF5F28FAF7C&ct=4aeUs0cAAABCWmgzMUFZJlNZpUotfgAAFp%2bAAQOiEoIBFACvx94AIABBFPUMnlDBpMg9NQoAAAAA4FmgmVIcRLo8QolPJA8BAlqtktqzhWUJueOL%2biEnmwhiN6pkQGGjNb8XckU4UJClSi1%2b">The Hybrid Workplace Series: Navigating Challenges and Embracing Change in the Hybrid Workplace</a><br />
+												This fifth event in the Hybrid Workplace Series offers an opportunity to reflect on the shift currently underway and the experience of transitioning to a hybrid work environment that is new for many federal employees.<br />
+												<b>June 5, 2023</b> | 1 hour | Webcast</p>
+
+												<p><b>New date! </b><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=7583D8B4F29BFEB88857308E00323FCAB15693A4863AD66F8F74099556EC09B8F70EA30103EA54F9405917C86D9DBD54B2AE4D65C7159CA57267FBDA35B2DB1E&ct=4aeUs0cAAABCWmgzMUFZJlNZlPqw2gAAFp%2bAAQOUEoIBFACvx94AIABBFPUYm1DBpMhtNQoAAAAAxqTMSKm8Iv7LMKHT2QOAQelUsdmK0UlCbXDm%2fwhJxKIZjep6PAg2Vbfi7kinChISn1YbQA%3d%3d">The Artistry of Change: The Top Practices of Highly Resilient Managers</a><br />
+												This event will demonstrate how the Artistry of Change&reg; blends diverse fields such as educational kinesiology, psychology, change management theory, creative process models, and neuroscience to help teams transition through change and build a culture of innovation wherever they go.<br />
+												<b>June 7, 2023</b> | 1.5 hours | Webcast</p>
+
+												<p><b>New date! </b><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=5A9461A63D14274CF9CC5BFDD7C321F79AB11534E454C3C674A2E50D67C16DD65C1B6122C28A91F1E91A4532665DF92DFAF554869B7B7147BF8CAC937A2D8A4D&ct=4aeUs0cAAABCWmgzMUFZJlNZWXrFYwAAFp%2bAAQPgMoIBFACvx94AIABIinqG1Mmmaj0j1NNPSCKaZMEwARg0Im4oOsEmcn9QvNKJ4YEAg9uWVFz%2bcLHLdxDdbCDzqEgbdacukgoCiNeC7kinChILL1isYA%3d%3d">Leadership Series: How to Work with (Almost) Anyone</a><br />
+												This interactive event features internationally best-selling author and coach Michael Bungay Stanier, who will share his tested process that can help to set up working relationships for the best possible success.<br />
+												<b>June 9, 2023</b> | 1.5 hours | Webcast</p>
+
+												<h2>Courses</h2>
+
+												<p><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=A797793E7C4CB35084429D71A0490F7E815CBFF6434CA7EB7D259BD283CF6FF7D260B73BCD44BDDF38C6942375047190B779ECDAE1A2D412F0327F8370F1253F&ct=4aeUs0UAAABCWmgzMUFZJlNZ%2f2KBuAAAFZ%2bAAQPSEogAkACvx94AIABIin6oek0aaeJNAekEQAAmJhMNQ3Wg0i0pLGudkanexGQLJ934auPxh%2bkU4C3PgJINEodlj2pGA0DiN%2fxdyRThQkP9igbg">Access to Information and Privacy Fundamentals (COR502)</a><br />
+												This online self-paced course for employees who handle access to information requests provides an overview of the <cite>Access to Information Act</cite> and the <cite>Privacy Act</cite> and outlines the steps to follow when receiving a request.</p>
+
+												<h2>Learning tools</h2>
+
+												<p><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=A981ADA29A320FA223C5D83999B69324F7D59A48B3A03D7E8FFB2A3877CFD624F2789D4C64F4C2F9A5675F867A1D5574B235F612D22E3C039FD55DD286054AA0&ct=4aeUszkAAABCWmgzMUFZJlNZpv5TpAAADZmAAAOAEC%2flzMAgAFRQNNDJiYIm1NDKZoaanZysmtqMwQNjwKMlp6o6l6CuJjnHQCTM%2b2%2bvEUwQyLuSKcKEhTfynSA%3d">Reconciliation: A Starting Point</a><br />
+												The Reconciliation: A Starting Point mobile app is a reference tool for learning about First Nations, Inuit and M&eacute;tis Peoples, including key historical events and examples of reconciliation initiatives.</p>
+
+												<hr style="color:#ddd; margin:20px 0 40px;" />
+												<h2 style="color:#da797a;">Stay connected</h2>
+
+												<p>For more learning opportunities, please visit <a href="https://arial.csps-efpc.gc.ca/ct.asp?id=B5890B0A3E825B77BE2611F6F5E60C2D50915B363F787A23AB673B5F6EABB32D37CDA17F868FD28972FCEFADA270C167092B6E8B6D67CE19184F85C87667A26F&ct=4aeUsyoAAABCWmgzMUFZJlNZdw1EUAAAC5mAAAOAEC%2fhTMAgACIg0YJo2oU0yMTExOiFF1ZkNkrBVBcnJy9a9wXgp6YBOyfF3JFOFCQdw1EUAA%3d%3d">Canada.ca/school</a>.</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td align="center" bgcolor="#ffffff" style="padding: 5px 0 50px 0;"><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=B5890B0A3E825B77BE2611F6F5E60C2D50915B363F787A23AB673B5F6EABB32D37CDA17F868FD28972FCEFADA270C167092B6E8B6D67CE19184F85C87667A26F&ct=4aeUsyoAAABCWmgzMUFZJlNZdw1EUAAAC5mAAAOAEC%2fhTMAgACIg0YJo2oU0yMTExOiFF1ZkNkrBVBcnJy9a9wXgp6YBOyfF3JFOFCQdw1EUAA%3d%3d"><img alt="Visit Our Website" class="social-media" height="52" src="https://ilms-emails-pictures-ep.azureedge.net/ilms-email-pictures/website_icon.png" style="display: inline; background-color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 16px;" width="52" /></a> &nbsp; <a href="https://arial.csps-efpc.gc.ca/ct.asp?id=17181F1ADA77F5ABB6F5F4CFA1100393562E8D92B4B4406B1599759D413477184D4B8AF54DF5E94FCB10A0616511E3E3EE369CAA0C499AFB1C3D57A0F089E909&ct=4aeUsx0AAABCWmgzMUFZJlNZLN1f3gAABp%2bAAAGAEAiACACKZtyAIAAih6QaNDNQpkxMgyM8OI%2bFHdLDMYmHs5rIow%2bLuSKcKEgWbq%2fvAA%3d%3d"><img alt="Visit Us on Twitter" class="social-media" height="52" src="https://ilms-emails-pictures-ep.azureedge.net/ilms-email-pictures/twitter_icon.png" style="display: inline; background-color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 16px;" width="52" /></a> &nbsp; <a href="https://arial.csps-efpc.gc.ca/ct.asp?id=43111A647455995D9A587342456586F027C18478305C92D033D7E2ED4DC9FD6E1FA4C3D7754B43A930998D7E5BE85A19F375C6FA0E38044CD50B06F241C0175B&ct=4aeUsy0AAABCWmgzMUFZJlNZQDFAeQAACRmAAAOAEC5vzKAgADFMJpoDTEIjTQGjTT0i8FmjAE2VDX22TtGBZmQLx4kHh%2bmkFRfi7kinChIIBigPIA%3d%3d"><img alt="Visit Us on LinkedIn" class="social-media" height="52" src="https://ilms-emails-pictures-ep.azureedge.net/ilms-email-pictures/linkedin_icon.png" style="display: inline; background-color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 16px;" width="52" /></a> &nbsp; <a href="https://arial.csps-efpc.gc.ca/ct.asp?id=E4556DB26B5CFD1A59180FE08F35CEA819518C18D7B8EFF10DACEFAA27C6AE8BDD6B482F1BD3F916FA4F84FA76991E35F7422221FEA231F64FFE8C152328A7E8&ct=4aeUsy0AAABCWmgzMUFZJlNZt4J2nQAACZ%2bAAAGAEAICCAAaR96gIAAxQNNDIyYhFHoJtDNQeqW7PT12BImHcfNoc8RU3zJqYlRVDFFaPxdyRThQkLeCdp0%3d"><img alt="Visit Us on YouTube" class="social-media" height="52" src="https://ilms-emails-pictures-ep.azureedge.net/ilms-email-pictures/youtube_icon.png" style="display: inline; background-color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 16px;" width="52" /></a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="email-gray-background" style="padding-top:25px;"><a id="en-link" name="en-link"></a>
+			<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse;" width="650">
+				<tbody>
+					<tr>
+						<td bgcolor="#3f2a56" class="banner-background" style="padding: 0; color:#fff;">
+						<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" class="mobile-banner" lang="fr-CA"><img alt="Tirez pleinement profit du GCApprentissage" src="https://arial.csps-efpc.gc.ca/uploads/D24AECE69BABF119B6F52FF59AA34D30/resources/gclearning_fr_725.jpg" /></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td bgcolor="#ffffff" style="padding: 20px 30px 20px 30px;">
+						<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+							<tbody>
+								<tr>
+									<td class="body-text" lang="fr-CA" style="padding:20px;">
+									<h1 style="margin-top:10px;">2 mai 2023</h1>
+									</td>
+								</tr>
+								<tr>
+									<td class="body-text intro-box" id="intro-fra" lang="fr-CA" style="padding:22px 20px 30px 20px; background-color: #f2f2f2; border-bottom: 18px solid #3f2a56;">
+									<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"><!-- Hide from Outlook. Already hidden in CSS, but prevents from re-appearing in forwarded emails --><!--[if !mso]><!-->
+										<tbody>
+											<tr>
+												<td align="center" class="mobile-feature" style="font-size: 0; padding: 0; height: 0; display: none; visibility: hidden;"><img alt="https://arial.csps-efpc.gc.ca/ct.asp?id=E56A07094A26352B31D02E9977FBD1174BB2E6C4575AD0AB5AB2782E0B9F7F581C2513242C30EAEE3D42E928603DFC4F8F7C98E6598F4A125472EE101742E748&ct=4aeUswAAAAA%3d" src="https://arial.csps-efpc.gc.ca/uploads/D24AECE69BABF119B6F52FF59AA34D30/resources/E-Update_MHLearningSeries_Mobile_280x150_1648.png" style="color: #ffffff; background-color: #fff; font-family: Helvetica, Arial, sans-serif; font-size: 16px;" width="0" /></td>
+											</tr>
+											<!--<![endif]-->
+											<tr>
+												<td align="right" class="desktop-feature" style="padding: 0"><img alt="https://arial.csps-efpc.gc.ca/ct.asp?id=E56A07094A26352B31D02E9977FBD1174BB2E6C4575AD0AB5AB2782E0B9F7F581C2513242C30EAEE3D42E928603DFC4F8F7C98E6598F4A125472EE101742E748&ct=4aeUswAAAAA%3d" src="https://arial.csps-efpc.gc.ca/uploads/D24AECE69BABF119B6F52FF59AA34D30/resources/E-Update_MHLearningSeries_Desktop_550x150_1647.png" style="width: 550px; height: 150px;" /></td>
+											</tr>
+										</tbody>
+									</table>
+
+									<h2>Semaine de la sant&eacute; mentale</h2>
+
+									<p>La Semaine de la sant&eacute; mentale, qui a lieu du 1er au 7&nbsp;mai&nbsp;2023, est une campagne annuelle de changement social visant &agrave; informer la population canadienne et &agrave; modifier les croyances et les perceptions au sujet de la sant&eacute; mentale. Le th&egrave;me de cette ann&eacute;e, &laquo;&nbsp;Mon histoire&nbsp;&raquo;, met en lumi&egrave;re les programmes communautaires en mati&egrave;re de soins de sant&eacute; mentale, les communaut&eacute;s et les voix, tout en soulignant l&#39;importance de fournir des soins de sant&eacute; mentale universels, ce &agrave; quoi ces soins pourraient ressembler et la mani&egrave;re gr&acirc;ce &agrave; laquelle il est possible d&#39;offrir et de maintenir des soins de sant&eacute; mentale.</p>
+
+									<ul>
+										<li><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=EA1241C8375404AD9D37CB96124449252952C64D394548D689F6AB2355D3F80561C821B0E67B2B95F2ED59E31A74BE18668FC9481893B393A1140BA8AB6CB3ED&ct=4aeUsykAAABCWmgzMUFZJlNZW1f0OgAAC5mAAAOAECtnXAAgACImmnqGIekKGmmADKAC7eMP2sS7EjIVZSewWxBrW%2bIPfF3JFOFCQW1f0Og%3d">Semaine de la sant&eacute; mentale</a></li>
+										<li><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=B34425217B7454ABD65A8B76F14639B7B24F506CD58285B3BB6A8FA4CB7542A524850B679AA4287C89C5B01E48E3E40DE61CF6FE8B785DC35BAA10E6F6B75726&ct=4aeUszIAAABCWmgzMUFZJlNZ9RecaQAADhmAAAOAECvHXMAgAEiI0HqGEZCmTEyDIzvEGoru2x7EKrwZM%2fsncHLE2YcVNCYTIeSTVC7kinChIeovONI%3d">S&eacute;rie d&#39;apprentissage sur la sant&eacute; mentale</a></li>
+									</ul>
+									</td>
+								</tr>
+								<tr>
+									<td class="body-text" lang="fr-CA" style="padding:10px 20px 20px 20px; background-color:#fff;">
+									<h2>Sensibilisation</h2>
+
+									<p><b>Semaine de sensibilisation &agrave; la protection de la vie priv&eacute;e 2023</b><br />
+									La Semaine de sensibilisation &agrave; la protection de la vie priv&eacute;e, qui a lieu du 1er au 7&nbsp;mai&nbsp;2023, vise &agrave; mieux faire conna&icirc;tre les aspects relatifs &agrave; la protection de la vie priv&eacute;e et l&#39;importance de prot&eacute;ger les renseignements personnels.</p>
+
+									<p><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=FF07CC5FBEBD348A81AFC3030BD69456F20E754698CAD66D62D7D17C953E83E89AD4E6F1A8E00B7EC2F03BE1D2EEE0A05386B5206F7E2C152408E9D6E40E261B&ct=4aeUs0cAAABCWmgzMUFZJlNZSzZeGQAAFp%2bAAQPSEooAkACvxt4AIABIinqHlMhptNI9QeiEU0wAAAAI3pUdYrPekOo2Sa19mBgIQfl2Vs7kNuEQjG7fCD0kEHG1kOPxwQBO9p4XckU4UJBLNl4Z">Semaine de sensibilisation &agrave; la protection de la vie priv&eacute;e 2023&nbsp;: Les renseignements accessibles au public sont parfois personnels</a><br />
+									<b>8 mai 2023 </b> | 1,5 heure | Webdiffusion</p>
+
+									<h2>&Eacute;v&eacute;nements &agrave; venir</h2>
+
+									<p><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=54E0DC41C33814FB0753290E3634CD56DADBB35EFDE334825E21C9EE31248916346E7592F087D3A7EF29B247C7AEB83886F5D3D9A5233D456F422593238AD7D8&ct=4aeUs0cAAABCWmgzMUFZJlNZi%2bJO1AAAFp%2bAAQOhEqIgEACvxt4AIABIinqHpPKG01PUaD0QiAAAAAIoZxROJqZ9JZ1Z%2faBIBA45ir1zuQ2VqFIb9%2fCEVmGHX3oWYkgoDe9b4u5IpwoSEXxJ2oA%3d">Surmonter l&#39;adversit&eacute; et recouvrer son pouvoir en tant que femme autochtone</a><br />
+									Cet &eacute;v&eacute;nement, qui aura lieu lors de la Journ&eacute;e de la robe rouge, mettra en vedette un panel diversifi&eacute; de femmes autochtones qui sont des mod&egrave;les de r&ocirc;le et qui communiqueront leur exp&eacute;rience personnelle, leur parcours et leurs difficult&eacute;s &agrave; surmonter les traumatismes interg&eacute;n&eacute;rationnels.<br />
+									<b>5 mai 2023</b> | 1,5 heure | Webdiffusion</p>
+
+									<p><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=FDAB9A32CBE5280536B7938F776C01F5DA4274D55DAD29D5DC07766B657843862C6FAF93A8F0DCED24629736C4B1A60C0CC42468C3A82CDDA087E878383471C3&ct=4aeUs0cAAABCWmgzMUFZJlNZl1CbUQAAFp%2bAAQOsEoohAACvxt4AIABIinqHlMhmpmo9QeiEU0wAAAAMnoo6xrNJQ6jZUovqAYCEH5dqtnchtPhCMbt8IPSQQcbWQ4%2fHBAE72nhdyRThQkJdQm1E">Mois du patrimoine juif canadien 2023&nbsp;: La c&eacute;l&eacute;bration de la diversit&eacute; de la population juive du Canada</a><br />
+									Cet &eacute;v&eacute;nement informatif et visant &agrave; briser les st&eacute;r&eacute;otypes permettra de c&eacute;l&eacute;brer la population juive du Canada et l&#39;identit&eacute; juive lors d&#39;une table ronde constitu&eacute;e de fonctionnaires venant de diff&eacute;rentes sous-ethnicit&eacute;s et communaut&eacute;s juives.<br />
+									<b>15 mai 2023</b> | 1,5 heure | Webdiffusion</p>
+
+									<p><b>Nouvelle date! </b><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=06040947509F2BFE5229B6C47495A57C9D2B9AF0E513606C859956E0B0D50C762CB4214DE7D73672AA37DCECC79F397A6E1F01A65700604530F34835CDD475A2&ct=4aeUs0cAAABCWmgzMUFZJlNZrrwyuQAAFp%2bAAQOiEoIBFACvxt4AIABIinqHpPSaYZRo09AiAAAAAIGoovNIwkfj7xRUtMHAIG3bVWu%2bCG86SJw49%2fEIrMMOvvQsxJBQG963xdyRThQkK68MrkA%3d">S&eacute;rie Le milieu de travail hybride&nbsp;: Surmonter les d&eacute;fis et accueillir le changement dans un milieu de travail hybride</a><br />
+									Le cinqui&egrave;me &eacute;v&eacute;nement de la s&eacute;rie Le milieu de travail hybride sera l&#39;occasion d&#39;examiner les changements en cours et de r&eacute;fl&eacute;chir &agrave; l&#39;exp&eacute;rience du passage &agrave; un milieu de travail hybride, lequel est nouveau pour bon nombre de fonctionnaires du gouvernement f&eacute;d&eacute;ral.<br />
+									<b>5 juin 2023</b> | 1 heure | Webdiffusion</p>
+
+									<p><b>Nouvelle date! </b><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=15D0820D4D188E403DCC05308ECC2AD9FE034F71ACC4DB735030E35E43AA1C9C4081E7D546893569CB47F9AF70B4EFED3F9DE360F0C12A7815ADE0FD6B76855C&ct=4aeUs0cAAABCWmgzMUFZJlNZnwyvHQAAFp%2bAAQOUEoIBFACvxt4AIABIinqNpNqGGUYj0QiAAAAAcTUUTNN4yh4eIoqezB4CEG7aq1dkhxOkieObfCEVmGHX3oWYkgoDe9b4u5IpwoSE%2bGV46A%3d%3d">L&#39;art du changement&nbsp;: les meilleures pratiques des gestionnaires hautement r&eacute;silients</a><br />
+									Lors de cet &eacute;v&eacute;nement, on d&eacute;montrera comment Artistry of Change&reg; marie divers domaines tels que la kin&eacute;siologie &eacute;ducative, la psychologie, la th&eacute;orie de la gestion du changement, les mod&egrave;les de processus cr&eacute;atifs et les neurosciences pour aider les &eacute;quipes &agrave; traverser le changement et &agrave; &eacute;tablir une culture de l&#39;innovation, quelle que soit leur destination.<br />
+									<b>7 juin 2023</b> | 1,5 heure | Webdiffusion</p>
+
+									<p><b>Nouvelle date! </b><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=16C13870B35F68DDB2928644F5477B5B5A1506C1988313E917FA499A55999E23F09AB80AF537CC745D7FE7329144466B565D162724A6B3A710E43F8DA8FEAEA0&ct=4aeUs0cAAABCWmgzMUFZJlNZUozapAAAFp%2bAAQPgMoIBFACvxt4AIABIinqG1Mmjyj0j1NHohFNMAAAACJ%2baDrJTTePcrGtF9QCAQi%2fTsrZ3gNk4OBDdvhB6SCDjayHH44IAne08LuSKcKEgpRm1SA%3d%3d">S&eacute;rie sur le leadership&nbsp;: Comment travailler avec n&#39;importe qui (ou presque)</a><br />
+									Lors de cet &eacute;v&eacute;nement interactif, Michael Bungay Stanier, coach et auteur &agrave; succ&egrave;s de renomm&eacute;e internationale, pr&eacute;sentera son processus &eacute;prouv&eacute; visant &agrave; &eacute;tablir les relations de travail qui donneront les meilleurs r&eacute;sultats possible.<br />
+									<b>9 juin 2023</b> | 1,5 heure | Webdiffusion</p>
+
+									<h2>Cours</h2>
+
+									<p><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=C27681E36B7B5D08A60CC6D11447B92679CCD7D3BEEF5C2B989922C3EB01F981506CC5EA5B5B05A6C3FFE001C4497B387D09AE26911A8B07A2F2664399B8BFCF&ct=4aeUs0UAAABCWmgzMUFZJlNZ9JSefwAAFZ%2bAAQPSEogAkACvxt4AIABIin6oeoyaabJNMj0QiAAAAANkmOHLCCOo%2b8ln70RkC3btvFprgxeyIewxX4FJ5hh196FmJIKA3vW%2bLuSKcKEh6Sk8%2fg%3d%3d">Cours de base sur l&#39;acc&egrave;s &agrave; l&#39;information et la protection des renseignements personnels (COR502)</a><br />
+									Ce cours en ligne &agrave; rythme libre, destin&eacute; aux employ&eacute;s qui traitent les demandes d&#39;acc&egrave;s &agrave; l&#39;information, d&eacute;crit les &eacute;tapes du traitement d&#39;une demande et fournit un aper&ccedil;u de la <cite>Loi sur l&#39;acc&egrave;s &agrave; l&#39;information</cite> et de la <cite>Loi sur la protection des renseignements personnels</cite>.</p>
+
+									<h2>Outils d&#39;apprentissage</h2>
+
+									<p><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=D5EDC3DAC08E53502062C7692C14E5AA93C019933A9E92443C5F82D4124090AEDE02C1714F36C91843661A59039F498B68DE644032481BF0E2DB3D1196B2CCA5&ct=4aeUszkAAABCWmgzMUFZJlNZvDsoMwAADZmAAAOAEC%2fl3MAgAEiKfpNDSNpPU8UIQaA00ZM%2brGaC36RTm9tNJlG24acUpghUO7IaWoAPjWXcKdvAu5IpwoSF4dlBmA%3d%3d">La r&eacute;conciliation&nbsp;: un point de d&eacute;part</a><br />
+									L&#39;appli mobile La r&eacute;conciliation&nbsp;: un point de d&eacute;part est un outil de r&eacute;f&eacute;rence pour apprendre sur les Premi&egrave;res Nations, les Inuits et les M&eacute;tis, y compris sur des &eacute;v&eacute;nements historiques cl&eacute;s et des initiatives de r&eacute;conciliation.</p>
+
+									<hr style="color:#ddd; margin:20px 0 40px;" />
+									<h2 style="color:#da797a;">Restez branch&eacute;s</h2>
+
+									<p>Pour d&eacute;couvrir d&#39;autres occasions d&#39;apprentissage, visitez le <a href="https://arial.csps-efpc.gc.ca/ct.asp?id=10251680B9CDFBBD83A701D1B7D4BF52EC82CC2D41D533F892067150609E4AF10D4278979C2F9A7F0C36FFF044BD2A2D387E6D3CA02CE7784A651CA858BFFA99&ct=4aeUsyoAAABCWmgzMUFZJlNZbcg%2fxwAAC5mAAAOAEC%2fhXMAgADFMmJkGRhEyANPUNqdNrlcTxaK5EMkbHGpx48CrOg7UlMi%2fxdyRThQkG3IP8cA%3d">Canada.ca/ecole</a>.</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" bgcolor="#ffffff" lang="fr-CA" style="padding: 5px 0 10px 0;"><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=10251680B9CDFBBD83A701D1B7D4BF52EC82CC2D41D533F892067150609E4AF10D4278979C2F9A7F0C36FFF044BD2A2D387E6D3CA02CE7784A651CA858BFFA99&ct=4aeUsyoAAABCWmgzMUFZJlNZbcg%2fxwAAC5mAAAOAEC%2fhXMAgADFMmJkGRhEyANPUNqdNrlcTxaK5EMkbHGpx48CrOg7UlMi%2fxdyRThQkG3IP8cA%3d"><img alt="Visitez notre site Web" class="social-media" height="52" src="https://ilms-emails-pictures-ep.azureedge.net/ilms-email-pictures/website_icon.png" style="display: inline; background-color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 16px;" width="52" /></a> &nbsp; <a href="https://arial.csps-efpc.gc.ca/ct.asp?id=A4F3A12501C81E087615CA1F3E81EDC96A8035271B99E17F323F3FD66FFBDCCB890D46D79214BF0CB74890E1D25F33CC8BD9660C56B633FF80C601F06E85143A&ct=4aeUsxwAAABCWmgzMUFZJlNZdl4WSgAABp%2bAAAGAEAqAAACKZtyAIAAiIxDIaG1CmTEyDIzqQvmN9Zfk7El0lYGQEJ8XckU4UJB2XhZK"><img alt="Visitez-nous sur Twitter" class="social-media" height="52" src="https://ilms-emails-pictures-ep.azureedge.net/ilms-email-pictures/twitter_icon.png" style="display: inline; background-color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 16px;" width="52" /></a> &nbsp; <a href="https://arial.csps-efpc.gc.ca/ct.asp?id=43111A647455995D9A587342456586F027C18478305C92D033D7E2ED4DC9FD6E1FA4C3D7754B43A930998D7E5BE85A19F375C6FA0E38044CD50B06F241C0175B&ct=4aeUsy0AAABCWmgzMUFZJlNZQDFAeQAACRmAAAOAEC5vzKAgADFMJpoDTEIjTQGjTT0i8FmjAE2VDX22TtGBZmQLx4kHh%2bmkFRfi7kinChIIBigPIA%3d%3d"><img alt="Visitez-nous sur LinkedIn" class="social-media" height="52" src="https://ilms-emails-pictures-ep.azureedge.net/ilms-email-pictures/linkedin_icon.png" style="display: inline; background-color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 16px;" width="52" /></a> &nbsp; <a href="https://arial.csps-efpc.gc.ca/ct.asp?id=E4556DB26B5CFD1A59180FE08F35CEA819518C18D7B8EFF10DACEFAA27C6AE8BDD6B482F1BD3F916FA4F84FA76991E35F7422221FEA231F64FFE8C152328A7E8&ct=4aeUsy0AAABCWmgzMUFZJlNZt4J2nQAACZ%2bAAAGAEAICCAAaR96gIAAxQNNDIyYhFHoJtDNQeqW7PT12BImHcfNoc8RU3zJqYlRVDFFaPxdyRThQkLeCdp0%3d"><img alt="Visitez-nous sur YouTube" class="social-media" height="52" src="https://ilms-emails-pictures-ep.azureedge.net/ilms-email-pictures/youtube_icon.png" style="display: inline; background-color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 16px;" width="52" /></a></td>
+					</tr>
+					<tr>
+						<td style="padding-top:0">
+						<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+							<tbody>
+								<tr>
+									<td align="right" class="gc-fip" style="padding: 20px"><img alt="Symbol of the Government of Canada - Symbole du gouvernement du Canada" src="https://arial.csps-efpc.gc.ca/uploads/D24AECE69BABF119B6F52FF59AA34D30/resources/Canada_RED_126x30px_with_white_BG_1417.png" style="display: inline; color: rgb(63, 42, 86); background-color: rgb(255, 255, 255); font-family: Helvetica, Arial, sans-serif; font-size: 16px; width: 126px; height: 30px;" /></td>
+								</tr>
+								<!-- Hide from Outlook. Already hidden in CSS, but prevents from re-appearing in forwarded emails --><!--[if !mso]><!-->
+								<tr>
+									<td align="right" class="gc-fip-darkmode" style="font-size: 0; padding: 0; height: 0; display: none; visibility: hidden;"><img alt="Symbol of the Government of Canada - Symbole du gouvernement du Canada" height="0" src="https://arial.csps-efpc.gc.ca/uploads/D24AECE69BABF119B6F52FF59AA34D30/resources/Canada_White_126x30px_742.png" style="display: inline; color: #ffffff; background-color: #ffffff;" /></td>
+								</tr>
+								<!--<![endif]-->
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="email-gray-background" style="padding:30px 0 20px 0;">
+			<p class="subscribed-email" style="text-align: center; color: #555; font-size: 16px !important; line-height: 120%;">You are subscribed as | Vous &ecirc;tes inscrit en tant que<br />
+			<a href="https://arial.csps-efpc.gc.ca/ct.asp?id=2D91C1492A430AE2DA4BBCA04BA0784A8B628CCDB56AE897FB1E0D5EC42B300140181FA855E65E135665B98DF2AA5AC8F6FB355D07AB35863BD0E242959E07BC&ct=4aeUsycAAABCWmgzMUFZJlNZDXSbdAAADZ2AAAEAEEAALq%2bdACAAMU0yMTExCJoPUwIaZXUyhyCdHi6uON0VtZbFzpkBeoo%2bLuSKcKEgGuk26A%3d%3d">derek.colson@servicecanada.gc.ca</a></p>
+
+			<p class="subscribe-text" style="text-align: center; font-size: 12px !important;padding: 10px;"><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=DE2D310FF8A30BB448EF2B9674288688D592E8FFD9FEB1E685E245D10C2ECB529DC23DB6AA4851DB83D4E69A7818E58CD9D397BF07900B2CA780F81D5EFEF678&ct=4aeUs0QAAABCWmgzMUFZJlNZdv5emQAAEhmAAAOAED%2fh3uAgAEiKeptE2JPU2mjUIg0yaDQDRzU9jdUS9UrH21i0n2wFmEcBaxeTNCl%2bZZRJgWHEUgETYSYDQ%2fi7kinChIO38vTI">Subscribe</a> | <a href="https://arial.csps-efpc.gc.ca/ct.asp?id=F6AA9BC77FB3DC69B7D9DE6743A0707718885312C6F20ABB43580DA245EEFB1380BFDE751C9C638283B35C31ABEE9D4DF0AFFA6E912B48FA1B983367016BE6DA&ct=4aeUs3YAAABCWmgzMUFZJlNZYvXzbgAAH52ACAOAEsAAP%2b%2ff4CAAaEU2ieppo9TaJkyMTEU9NT0mJtCNADyjam8wjcl8IvneWKN2UNBRlq30QLEEdR%2f6FgIXnpvPlTdaZ7TggQi1H2ZwlAiuFUFSKgvMdQRejm%2fRAiBnJscGaN1DOsvxdyRThQkGL1824A%3d%3d">Unsubscribe</a> | <a href="https://arial.csps-efpc.gc.ca/ct.asp?id=ACBC5AADACECF2754230A00B9AD407984FAFD0ADA8944CCEAA1469146B26C15F79FA6E534108D3676585A76B2B83BF346D7056D7BFD5FD901374B943E222A4CE&ct=4aeUs30AAABCWmgzMUFZJlNZecZd4wAAIJ2ACAOAEsAAP%2b%2ff4CAAaiKbRqYTDSMmhhCKb1JhG1HqaPUZGmhnlY4nIKJWl80wdXL2LQNhNV8BILkE%2fh1EVAe%2bLcQQUvswA1ebNCt8kpQmgsCfniTV5nFBdzTcI7wCkefSlQ2uUTX6INQojIPY78XckU4UJB5xl3jA">Update your preferences</a><br />
+			<a href="https://arial.csps-efpc.gc.ca/ct.asp?id=2C5704E3B61F3845DE4E487BED0D34009F5F801D6B94C5D7C924198117E330EB28174C01B7B38143541813B320A86B2609D2838F3DF00CD69708598A60189A70&ct=4aeUs0AAAABCWmgzMUFZJlNZ5%2bEDTQAADxmACAOAEC%2fj3MAgAFRQDTTTTENDH6TKNk0g2p%2bqGhLkO0QiiOaSRrfOxXtWEMxmi%2bE6Wq8wL3zJxLZC%2foVxn4u5IpwoSHPwgaaA">Privacy Notice</a> | <a href="https://arial.csps-efpc.gc.ca/ct.asp?id=41538583E4B4FADAD542F65133B16FF001F7C4E6268100E9FC5B1143F050A96163435F853C5E1CD8B4D770FA42BC6CF3DA7550C2F63124220892854E839BB86A&ct=4aeUszQAAABCWmgzMUFZJlNZLALvowAADp%2bAAAOAEAgAAgCv4czAIABUUaMgaNMjQinqME08U2k%2fKmzHhXDW7Cubq2bcpgOmp6r6wqduJSBOli5KRq%2fxdyRThQkCwC76MA%3d%3d">Contact us</a></p>
+
+			<p class="subscribe-text" style="text-align: center; font-size: 12px !important;padding: 10px;"><a href="https://arial.csps-efpc.gc.ca/ct.asp?id=C5C3328503FB71244BE6DAF2A9A68EF7F8E2AD8E92AE9615EA248DB4AA1891082A9708262C4BC7861B9DD6621E323AA1CC31A3072E77E0A3D1A88AB49DF3AA35&ct=4aeUs0QAAABCWmgzMUFZJlNZbDslDgAAEhmAAAOAED%2fh3uAgAEip6m1P0jUYyT1PUIg0eoDQDR7i0FZTumwo9aGgSvOqG8LstCqSyS%2fzZ8Kp5ojuJgEZyU4qQmPi7kinChINh2ShwA%3d%3d">Inscrivez-vous</a> | <a href="https://arial.csps-efpc.gc.ca/ct.asp?id=76C7C6D8AEBCEA35C4605E2E925303A3CBF9813AAA2A17D08EEE4E4BE569474DF2FA00817A620E70838E6995808A4F4404B90242F89819078DE3D55A1C81F381&ct=4aeUs3YAAABCWmgzMUFZJlNZFthC4gAAH52ACAOAEsAAP%2b%2ff4CAAZEU2U9J6htT0mgaaYhSZPSY0IYAJ6iTUYBKpFoxapzbxKIJTGOP3tcPQq8ODG7DiG7%2fKKyz3OMD5hkoZJfZ8bi4lHgG2dYiZxIbpAtpnB8lDQwAJcnImS%2bMPbfxdyRThQkBbYQuI">D&eacute;sabonnez-vous</a> | <a href="https://arial.csps-efpc.gc.ca/ct.asp?id=496DF7C6768A4B9FB1E44F8A6E7099428F01E10354085517950D3B3CAEC5E6E1213F62A5612D8A98EB95AB96C62D2A0036A2D03ECC36EF4675CDD29510C4310D&ct=4aeUs30AAABCWmgzMUFZJlNZaPsOeQAAIJ2ACAOAEsAAP%2b%2ff4CAAciITaRk2k0wTAQipv0RPVH6RtKPKPUeJFvbnKclUzNnOXe2mX8oO4dMZK5ZgXnA6mEKkdXbiYvR9tpVjKPBY6mzb0mMAosh1tRXGoHKARX3FSfqw%2bSevtIrLYhspH0Demfi7kinChINH2HPI">Mettez &agrave; jour vos pr&eacute;f&eacute;rences</a><br />
+			<a href="https://arial.csps-efpc.gc.ca/ct.asp?id=40EB1A822E65735F4BD0A5247EB70DA640224F0597BADD52C2CC4D410F6EBEC124C1590533C3270D52639D725D72153B58C90C421ED47A6CBF8039BD22A3A568&ct=4aeUs0AAAABCWmgzMUFZJlNZ%2fxd0LAAADxmACAOAEC%2fj3MAgAFRQDRk0ZGQx%2biaTGptTR%2bpqSR1aRdqXTbJiNpkHmJppWZ61fsy4hSdYC%2bWzJ8lshdoVwPxdyRThQkP8XdCw">Avis de confidentialit&eacute;</a> | <a href="https://arial.csps-efpc.gc.ca/ct.asp?id=00C9D445AC2EF25BF1E0676A110F470B19FF8AD414A45CE51BC0B98B0310178AECD34CB215E99164F0AEB23771D1DCE15801321C5B3F747B2B38EFDE71DEBFD7&ct=4aeUszQAAABCWmgzMUFZJlNZNseUNAAADp%2bAAAOAEAgAAgCv4dzAIABUUAGI000aEU8o02kzSemk9qmxbwGvNF%2bPACpiKoVpzqEo7SNtMEeZ05vUAmTHxdyRThQkDbHlDQA%3d">Contactez-nous</a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
+
+
+<img src="https://arial.csps-efpc.gc.ca/ot.asp?id=8E731205DF9507BE82C4F5B2EAE828BE6E1EDB366260E2D5CE571B77842074B884BF4092B4C34078C95B485F305CAEF611688039C7BB8BA765C4ED80BF6B4245" alt="" width="1" height="1"/>
+</body>
+</html>
